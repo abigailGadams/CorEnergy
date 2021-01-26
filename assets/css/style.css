@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+.brand-logo {
+  padding-left: 20px;
+  float: left;
+}
+
+nav {
+  background-color: gray;
+}
+
+.page-footer {
+  background-color: gray;
+}
+
+.page-footer .footer-copyright {
+  background-color: rgb(75, 75, 75);
+}
+
+/* THIS IS NEEDED FOR THE FOOTER TO FUNCTION */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* THIS IS NEEDED FOR THE FOOTER TO FUNCTION */
+main {
+  flex: 1 0 auto;
+}
