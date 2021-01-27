@@ -8,6 +8,9 @@ var edamamApiKey = "app_key=0a1818257115e160cf6b36653e441db7";
 var contentType = "Content-Type=application/json";
 var ingr = "ingr=";
 
+var beginWorkoutUrl = "https://wger.de/api/v2/workout/"
+var workoutToken ="63b5f033aef2364d1ad05528871fe89c53aa18ea";
+var workoutContentType = "Content-Type=application/json"
 //--------------------------------------------------------------//
 // RECIPE DATA
 // Example: https://api.edamam.com/search?q=chicken&app_id=90284fbd&app_key=0d395c4ef4882bf9cdc1059aadbc0905&from=0&to=3&calories=591-722&health=alcohol-free
@@ -43,6 +46,30 @@ var fetchData = function (event, qty, food) {
 }
     
 
+var getExercise = function() {
+    var exerciseWorkout = "https://wger.de/api/v2/exercise/";
 
+    let h= new Headers();
+    h.append('Accept','application/json');
+    h.append('Authorization','Token 63b5f033aef2364d1ad05528871fe89c53aa18ea');
+    
+
+    let req = new Request(exerciseWorkout, {
+        method: "GET",
+        headers: h
+
+    });
+    fetch(req).then(function(response){
+        if(response.ok){
+            response.json().then(function(data){
+                console.log(data);
+
+                for(i=0;i < data.results.length; i++){
+                    console.log(data.results[i].name);
+                }
+            });
+        }
+    });
+};
 
 
