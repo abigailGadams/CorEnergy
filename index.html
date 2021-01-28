@@ -18,8 +18,9 @@
     
     <!-- Stylesheet for CorEnergy-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link rel="stylesheet" href="./assets/css/style.css" />
+
+
     
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
@@ -52,8 +53,35 @@
     <!-- MAIN SECTION OF THE SITE-->
 
     <main>
-      <div>
-        <p>Test</p>
+      <div class="container">
+        <div class="hero-form">
+          <h3>Get Started Today</h3>
+          <p>Fill out this form and one of our trainers will schedule a consult.</p>
+          <form>
+            <label for="name">Enter full name:</label>
+            <input type="text" placeholder="Your Name" id="name" name="name" class="form-input" />
+            <label for="email">Enter email address:</label>
+            <input type="email" placeholder="Email Address" id="email" name="email" class="form-input" />
+            <label for="phone">Enter a telephone number:</label>
+            <input type="tel" placeholder="Phone Number" name="phone" id="phone" class="form-input" />
+            <p>
+              Have you worked out with a trainer before? 
+              <input type="radio" name="trainer-confirm" id="trainer-yes" />
+              <label for="trainer-yes">Yes</label>
+              <input type="radio" name="trainer-confirm" id="trainer-no"/>
+              <label for="trainer-no">No</label>
+            </p>
+            <p>
+              <label for="checkbox">
+                I acknowledge that I am at least 18 years of age.
+              </label>
+              <input type="checkbox" name="checkpoint1" id="checkbox" />
+            </p>
+            <button type="submit">
+              Get running!
+            </button>
+          </form>
+        </div>
       </div>
     </main>
 
@@ -95,6 +123,10 @@
         </div>
       </div>
     </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Main Javascript -->
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
