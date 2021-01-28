@@ -7,9 +7,15 @@
   float: left;
 }
 
+
 nav {
   background-color: gray;
+  margin-bottom: 0px;
 }
+
+/* Hero Style start here*/
+
+
 
 .page-footer {
   background-color: gray;
@@ -31,6 +37,27 @@ main {
   flex: 1 0 auto;
 }
 
-.hero-form{
+.hero{
   /* background-image: url(); */
+  background-image: url("../images/project_hero.jpg");
+  height: 640px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-form{
+  color:white;
+  border-style: solid 3px #024e76;
+  border-radius: 5px;
+  border: solid white 1px;
+  background-color: black;
+  opacity:0.75;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height:auto;
+  width: 500px;
+  position: absolute;
+  bottom: 120px;
+  right: 140px;
 }
