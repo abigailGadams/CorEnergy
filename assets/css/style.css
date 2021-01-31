@@ -43,6 +43,10 @@ main {
   text-align: center;
 } */
 
+.validate{
+  color: white;
+}
+
 .how-it-works{
   text-align: center;
   padding: 10px 15px;
