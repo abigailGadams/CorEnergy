@@ -15,15 +15,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CoreEnergy</title>
-    
+
     <!-- Stylesheet for CorEnergy-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-
-    
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
   </head>
 
   <!-- START OF THE BODY -->
@@ -32,7 +36,9 @@
       <div>
         <nav>
           <div class="nav-wrapper grey">
-            <img id="logo-container" href="#" 
+            <img
+              id="logo-container"
+              href="#"
               src="./assets/images/logo.png"
               alt="Test"
               height="60"
@@ -41,9 +47,9 @@
             />
 
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="#">Component 1</a></li>
+              <!-- <li><a href="#">Component 1</a></li>
               <li><a href="#">Component 2</a></li>
-              <li><a href="#">Component 3</a></li>
+              <li><a href="#">Component 3</a></li> -->
             </ul>
           </div>
         </nav>
@@ -51,78 +57,125 @@
     </header>
 
     <!-- MAIN SECTION OF THE SITE-->
-    <section class="hero">
-      <div class="hero-form">
-        <h3>Get Started Today</h3>
-        <p>Fill out this form and one of our trainers will schedule a consult.</p>
-        <form>
-          <label for="name">Enter full name:</label>
-          <input type="text" placeholder="Your Name" id="name" name="name" class="form-input" />
-          <label for="email">Enter email address:</label>
-          <input type="email" placeholder="Email Address" id="email" name="email" class="form-input" />
-          <label for="phone">Enter a telephone number:</label>
-          <input type="tel" placeholder="Phone Number" name="phone" id="phone" class="form-input" />
-          <p>
-            Have you worked out with a trainer before? 
-            <input type="radio" name="trainer-confirm" id="trainer-yes" />
-            <label for="trainer-yes">Yes</label>
-            <input type="radio" name="trainer-confirm" id="trainer-no"/>
-            <label for="trainer-no">No</label>
-          </p>
-          <p>
-            <label for="checkbox">
-              I acknowledge that I am at least 18 years of age.
-            </label>
-            <input type="checkbox" name="checkpoint1" id="checkbox" />
-          </p>
-          <button type="submit">
-            Get running!
-          </button>
-        </form>
+    <section class="how-it-works grey darken-1">
+      <div class="col s12 m7">
+        <h2 class="header">How it Works</h2>
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="" />
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <p>PLACEHOLDER</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-  </section>
+    <section class="hero">
+      <div class="her-form">
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input
+                  placeholder="Placeholder"
+                  id="first_name"
+                  type="text"
+                  class="validate"
+                />
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate" />
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input
+                  disabled
+                  value="I am not editable"
+                  id="disabled"
+                  type="text"
+                  class="validate"
+                />
+                <label for="disabled">Disabled</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate" />
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate" />
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                This is an inline input field:
+                <div class="input-field inline">
+                  <input id="email_inline" type="email" class="validate" />
+                  <label for="email_inline">Email</label>
+                  <span
+                    class="helper-text"
+                    data-error="wrong"
+                    data-success="right"
+                    >Helper text</span
+                  >
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
 
-    <main>
-     
-      
-    </main>
+    <section class="testimonials grey darken-1">
+      <div class="col s12 m7">
+        <h2 class="header">Testimonials</h2>
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="" />
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <p>PLACEHOLDER</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER SECTION OF THE SITE -->
     <footer class="page-footer grey">
       <div class="container">
         <div class="row">
-          <div class="col l3 s12">
+          <div class="col l6 s12">
             <h5 class="white-text">Company Bio</h5>
 
             <p class="grey-text text-lighten-4">
-              We are a team hoping to create a platform which allows users to access workout plans and nutrition infomation customized to their specific health goals. 
+              We are a team hoping to create a platform which allows users to
+              access workout plans and nutrition infomation customized to their
+              specific health goals.
             </p>
-          </div>
-          <div class="col l3 s12">
-            <h5 class="white-text">Contact Us</h5>
-            <ul>
-              <li><a class="white-text" href="#!">1-800-XXX-XXXX</a></li>
-              <li><a class="white-text" href="#!">Link 2</a></li>
-              <li><a class="white-text" href="#!">Link 3</a></li>
-              <li><a class="white-text" href="#!">Link 4</a></li>
-            </ul>
-          </div>
-          <div class="col l3 s12">
-            <h5 class="white-text">Support</h5>
-            <ul>
-              <li><a class="white-text" href="#!"><i class="material-icons">phone_caller</i>Call Us</a></li>
-              <li><a class="white-text" href="#!">Email Us</a></li>
-              <li><a class="white-text" href="#!">Connect with Trainer</a></li>
-              <li><a class="white-text" href="#!">FAQs</a></li>
-            </ul>
           </div>
         </div>
       </div>
       <div class="footer-copyright">
         <div class="container">
-          © 2014 Copyright Text
+          © 2021 CorEnergy Inc.
           <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
         </div>
       </div>

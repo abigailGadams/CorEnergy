@@ -19,6 +19,8 @@ nav {
 
 .page-footer {
   background-color: gray;
+  height: auto;
+  padding-top: 0px;
 }
 
 .page-footer .footer-copyright {
@@ -37,6 +39,27 @@ main {
   flex: 1 0 auto;
 }
 
+/* .header{
+  text-align: center;
+} */
+
+.how-it-works{
+  text-align: center;
+  padding: 10px 15px;
+  color: white;
+  
+}
+
+.card-stacked {
+  color: black;
+}
+
+.testimonials{
+  text-align: center;
+  padding: 10px 15px;
+  color: white;
+}
+
 .hero{
   /* background-image: url(); */
   background-image: url("../images/project_hero.jpg");
@@ -51,13 +74,9 @@ main {
   border-style: solid 3px #024e76;
   border-radius: 5px;
   border: solid white 1px;
-  background-color: black;
+  background-color: white;
   opacity:0.75;
-  padding-top: 30px;
-  padding-bottom: 30px;
+
   height:auto;
-  width: 500px;
-  position: absolute;
-  bottom: 120px;
-  right: 140px;
+  width: auto;
 }
