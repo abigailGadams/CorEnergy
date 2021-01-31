@@ -1,3 +1,10 @@
+var userForm = document.querySelector("#user-form");
+var feet = document.getElementById("feet");
+var inches = document.getElementById("inches");
+var workoutType = document.getElementsByName("group1");
+var muscleGroup = document.getElementsByName("muscleGroup");
+var firstName = document.getElementById("first_name");
+
 // NUTRITION DATA
 // API # 1: Edamam
 // API Doc for https://developer.edamam.com/edamam-docs-nutrition-api
@@ -14,20 +21,21 @@ var ingr = "ingr=";
 // Todo: Create more variables to hold new appId and apiKey
 
 //Not used now, might need later
-var getNutritionData = function(qty ,foodType1){
-    var apiUrl = beginNutritionUrl + edamamApiId + "&" + edamamApiKey + "&" + contentType + "&" + ingr + qty + "%20" +foodType1;
+var getNutritionData = function (qty, foodType1) {
+    var apiUrl = beginNutritionUrl + edamamApiId + "&" + edamamApiKey + "&" + contentType + "&" + ingr + qty + "%20" + foodType1;
     console.log(apiUrl);
 
-    fetch(apiUrl).then(function(response){
-        if(response.ok){
-            response.json().then(function(data){
+    fetch(apiUrl).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (data) {
                 console.log("This works!");
                 console.log("This is: " + data.ingredients[0].text);
                 console.log(data.ingredients[0].parsed);
             });
         }
     });
-;}
+    ;
+}
 
 //Not used now, might need later
 var fetchData = function (event, qty, food) {
@@ -41,7 +49,43 @@ var fetchData = function (event, qty, food) {
 
     getNutritionData(quantity, food);
 }
-    
+
+
+var userSubmittedData = function (event) {
+    event.preventDefault();
+    var userInputFeet = feet.value;
+    var userInputInches = inches.value;
+    var name = firstName.value;
+
+
+    // THIS GETS THE WORKOUT TYPE FROM RADIO BUTTONS
+    for (i = 0; i < workoutType.length; i++) {
+        if (workoutType[i].checked) {
+            console.log("Workout Type: ", workoutType[i].value);
+        }
+    }
+
+    // THIS GETS THE MUSCLE GROUP FROM RADIO BUTTONS
+    for (i = 0; i < muscleGroup.length; i++) {
+        if (muscleGroup[i].checked) {
+            console.log("Target muscle group: " + muscleGroup[i].value);
+        }
+    }
+
+    console.log("Users name is: " + name);   
+
+
+    if (userInputFeet === "" || userInputInches === "") {
+        console.log("bad request");
+    } else {
+        console.log("User selected: " + userInputFeet + " feet and " + userInputInches + " inches");
+    }
+}
+
+
+userForm.addEventListener("submit", userSubmittedData);
+
+
 
 
 

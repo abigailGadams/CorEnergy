@@ -58,9 +58,13 @@ main {
   text-align: center;
   padding: 10px 15px;
   color: white;
+
 }
 
 .hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* background-image: url(); */
   background-image: url("../images/project_hero.jpg");
   height: 640px;
@@ -70,13 +74,17 @@ main {
 }
 
 .hero-form{
+
   color:white;
   border-style: solid 3px #024e76;
   border-radius: 5px;
   border: solid white 1px;
-  background-color: white;
+  background-color: black;
   opacity:0.75;
+  height:90%;
+  width: 50%;
+}
 
-  height:auto;
-  width: auto;
+.input-field{
+  color: white;
 }

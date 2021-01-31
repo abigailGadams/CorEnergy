@@ -35,7 +35,7 @@
     <header>
       <div>
         <nav>
-          <div class="nav-wrapper grey">
+          <div class="nav-wrapper black">
             <img
               id="logo-container"
               href="#"
@@ -57,7 +57,7 @@
     </header>
 
     <!-- MAIN SECTION OF THE SITE-->
-    <section class="how-it-works grey darken-1">
+    <section class="how-it-works black">
       <div class="col s12 m7">
         <h2 class="header">How it Works</h2>
         <div class="card horizontal">
@@ -66,10 +66,7 @@
           </div>
           <div class="card-stacked">
             <div class="card-content">
-              <p>PLACEHOLDER</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
+              <p>Enter in your information and click submit, based on your input we will automatically generate a recommended meal and workout type!</p>
             </div>
           </div>
         </div>
@@ -77,69 +74,91 @@
     </section>
 
     <section class="hero">
-      <div class="her-form">
+      <div class="hero-form">
         <div class="row">
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s6">
-                <input
-                  placeholder="Placeholder"
-                  id="first_name"
-                  type="text"
-                  class="validate"
-                />
-                <label for="first_name">First Name</label>
-              </div>
-              <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate" />
-                <label for="last_name">Last Name</label>
-              </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="Please enter your first name here" id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
             </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input
-                  disabled
-                  value="I am not editable"
-                  id="disabled"
-                  type="text"
-                  class="validate"
-                />
-                <label for="disabled">Disabled</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="password" type="password" class="validate" />
-                <label for="password">Password</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="email" type="email" class="validate" />
-                <label for="email">Email</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12">
-                This is an inline input field:
-                <div class="input-field inline">
-                  <input id="email_inline" type="email" class="validate" />
-                  <label for="email_inline">Email</label>
-                  <span
-                    class="helper-text"
-                    data-error="wrong"
-                    data-success="right"
-                    >Helper text</span
-                  >
-                </div>
-              </div>
-            </div>
+        <div class="row">
+          <form class="col s12" id="user-form">
+            <label>Height</label>
+            <select class="browser-default" id="feet">
+              <option value="" disabled selected>Choose your height</option>
+              <option value="4">4 Feet</option>
+              <option value="5">5 Feet</option>
+              <option value="6">6 Feet</option>
+              <option value="7">7 Feet</option>
+            </select>
+            <label>Inches</label>
+            <select class="browser-default" id="inches">
+              <option value="" disabled selected>Choose your option</option>
+              <option value="0">0 inch</option>
+              <option value="1">1 inch</option>
+              <option value="2">2 inches</option>
+              <option value="3">3 inches</option>
+              <option value="4">3 inches</option>
+              <option value="5">5 inches</option>
+              <option value="6">6 inches</option>
+              <option value="7">7 inches</option>
+              <option value="8">8 inches</option>
+              <option value="9">9 inches</option>
+              <option value="10">10 inches</option>
+              <option value="11">11 inches</option>
+            </select>
+            <p>Workout Type</p>
+            <p>
+              <label >
+                <input name="group1" type="radio" id="workoutType" value="Mass" />
+                <span>Mass</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="group1" type="radio" id="workoutType" value="Lean" />
+                <span>Lean</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="group1" type="radio" id="workoutType" value="Endurance" />
+                <span>Endurance</span>
+              </label>
+            </p>   
+
+
+            <!-- TARGETED MUSCLE GROUP LIST-->
+            <p>Targed Muscle Group</p>
+            <p>
+              <label >
+                <input name="muscleGroup" type="radio" value="Upper Body" />
+                <span>Upper Body</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="muscleGroup" type="radio" value="Lower Body" />
+                <span>Lower Body</span>
+              </label>
+            </p>
+
+            <!-- SUBMIT BUTTON-->
+            <button
+              class="btn waves-effect waves-light"
+              id="submit"
+              type="submit"
+              name="action"
+            >
+              Submit
+              <i class="material-icons right">send</i>
+            </button>
           </form>
         </div>
       </div>
     </section>
 
-    <section class="testimonials grey darken-1">
+    <section class="testimonials black">
       <div class="col s12 m7">
         <h2 class="header">Testimonials</h2>
         <div class="card horizontal">
@@ -159,7 +178,7 @@
     </section>
 
     <!-- FOOTER SECTION OF THE SITE -->
-    <footer class="page-footer grey">
+    <footer class="page-footer black">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
