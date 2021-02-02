@@ -15,13 +15,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CoreEnergy</title>
-    
+
     <!-- Stylesheet for CorEnergy-->
+<<<<<<< HEAD
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+=======
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+>>>>>>> main
     <link rel="stylesheet" href="./assets/css/style.css" />
-    
+
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
   </head>
 
   <!-- START OF THE BODY -->
@@ -29,8 +39,10 @@
     <header>
       <div>
         <nav>
-          <div class="nav-wrapper grey">
-            <img id="logo-container" href="#" 
+          <div class="nav-wrapper black">
+            <img
+              id="logo-container"
+              href="#"
               src="./assets/images/logo.png"
               alt="Test"
               height="60"
@@ -39,9 +51,9 @@
             />
 
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="#">Component 1</a></li>
+              <!-- <li><a href="#">Component 1</a></li>
               <li><a href="#">Component 2</a></li>
-              <li><a href="#">Component 3</a></li>
+              <li><a href="#">Component 3</a></li> -->
             </ul>
           </div>
         </nav>
@@ -49,51 +61,223 @@
     </header>
 
     <!-- MAIN SECTION OF THE SITE-->
-
-    <main>
-      <div>
-        <p>Test</p>
+    <section class="how-it-works black">
+      <div class="col s12 m7">
+        <h5 class="header">"Don't Limit Your Challenges. Challenge Your Limits."</h5>
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="" />
+          </div>
+        </div>
       </div>
-    </main>
+    </section>
+   
+
+    <section class="hero">
+            <div class="caption left-align">
+              <h3>Today is the day</h3>
+              <h5 class="light grey-text text-lighten-3">Enter your health goals to gain instant access to a personalized workout plan or meal plan</h5>
+            </div>
+          </div>
+      <div class="hero-form">
+        <div class="row">
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="Please enter your first name here" id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+        <div class="row">
+          <form class="col s12" id="user-form">
+            <label>Height</label>
+            <select class="browser-default" id="feet">
+              <option value="" disabled selected>Choose your height</option>
+              <option value="4">4 Feet</option>
+              <option value="5">5 Feet</option>
+              <option value="6">6 Feet</option>
+              <option value="7">7 Feet</option>
+            </select>
+            <label>Inches</label>
+            <select class="browser-default" id="inches">
+              <option value="" disabled selected>Choose your option</option>
+              <option value="0">0 inch</option>
+              <option value="1">1 inch</option>
+              <option value="2">2 inches</option>
+              <option value="3">3 inches</option>
+              <option value="4">3 inches</option>
+              <option value="5">5 inches</option>
+              <option value="6">6 inches</option>
+              <option value="7">7 inches</option>
+              <option value="8">8 inches</option>
+              <option value="9">9 inches</option>
+              <option value="10">10 inches</option>
+              <option value="11">11 inches</option>
+            </select>
+            <p>Workout Type</p>
+            <p>
+              <label >
+                <input name="group1" type="radio" id="workoutType" value="Mass" checked/>
+                <span>Mass</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="group1" type="radio" id="workoutType" value="Lean" />
+                <span>Lean</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="group1" type="radio" id="workoutType" value="Endurance" />
+                <span>Endurance</span>
+              </label>
+            </p>   
+
+
+            <!-- TARGETED MUSCLE GROUP LIST-->
+            <p>Targed Muscle Group</p>
+            <p>
+              <label >
+                <input name="muscleGroup" type="radio" value="Upper Body" checked/>
+                <span>Upper Body</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="muscleGroup" type="radio" value="Lower Body" />
+                <span>Lower Body</span>
+              </label>
+            </p>
+
+            <!-- SUBMIT BUTTON-->
+            <button
+              class="btn waves-effect waves-light modal-trigger"
+              id="submit"
+              type="submit"
+              name="action"
+            >
+              Submit
+              <i class="material-icons right">send</i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <div class = "page-break"></div>
+  <section class="workout-plan black">
+    <div class="col s12 m7">
+      <h2 class="header">Your Workout Plan</h2>
+      <div class="divider"></div>
+      <div style= "height:auto">
+        <div class="section" style = "height:300px">
+          <h5>Set 1:</h5>
+          <p>Stuff</p>
+        </div>
+        <div class="divider"></div>
+        <div class="section" style = "height:300px">
+          <h5>Set 2:</h5>
+          <p>Stuff</p>
+        </div>
+        <div class="divider"></div>
+        <div class="section" style = "height:300px">
+          <h5>Set 3:</h5>
+          <p>Stuff</p>
+        </div>
+      </div>
+      </div>
+      <!--CONTAINER-->
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="" />
+        </div>
+      </div>
+  </section>
+<div class = "page-break"></div>
+
+        <section class="nutrition-plan black">
+          <div class="col s12 m7">
+            <h2 class="header">Your Nutrition Plan</h2>
+            <div style= "height:auto"></div><!--CONTAINER-->
+             <!-- Page Layout -->
+            <div class="row">
+            <div class="col s12 m4 l3" style = "height:300px">
+              <h5>Recipe</h5>
+            </div>
+            <div class="col s12 m8 l9" style = "height:300px">
+              <h5>Ingredients</h5>
+            </div>
+            <div class="Recipe">
+              <div class="card-image">
+                <img src="" />
+              </div>
+            </div>
+          </section>
+
+<div class = "page-break"></div>
+    <section class="testimonials black">
+      <div class="col s12 m7">
+        <h2 class="header">Testimonials</h2>
+        <div style= "height:500px"></div><!--CONTAINER-->
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="" />
+          </div>
+
+
+    <div class = "page-break"></div>     
+          <section class="card-stacked">
+            <div class="card-content">
+              <h2>Featured Content</h2>
+            </div>
+            <div style= "height:500px"></div> <!--CONTAINER-->
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER SECTION OF THE SITE -->
-    <footer class="page-footer grey">
+    <footer class="page-footer black">
       <div class="container">
         <div class="row">
-          <div class="col l3 s12">
-            <h5 class="white-text">Company Bio</h5>
+          <div class="col l6 s12">
+            <h5 class="white-text">About CoreEnergy</h5>
 
             <p class="grey-text text-lighten-4">
-              We are a team hoping to create a platform which allows users to access workout plans and nutrition infomation customized to their specific health goals. 
+              We are a team driven individuals hoping to create a platform which allows users to
+              access workout plans and nutrition infomation customized to their
+              specific health goals.
             </p>
-          </div>
-          <div class="col l3 s12">
-            <h5 class="white-text">Contact Us</h5>
-            <ul>
-              <li><a class="white-text" href="#!">1-800-XXX-XXXX</a></li>
-              <li><a class="white-text" href="#!">Link 2</a></li>
-              <li><a class="white-text" href="#!">Link 3</a></li>
-              <li><a class="white-text" href="#!">Link 4</a></li>
-            </ul>
-          </div>
-          <div class="col l3 s12">
-            <h5 class="white-text">Support</h5>
-            <ul>
-              <li><a class="white-text" href="#!"><i class="material-icons">phone_caller</i>Call Us</a></li>
-              <li><a class="white-text" href="#!">Email Us</a></li>
-              <li><a class="white-text" href="#!">Connect with Trainer</a></li>
-              <li><a class="white-text" href="#!">FAQs</a></li>
-            </ul>
           </div>
         </div>
       </div>
       <div class="footer-copyright">
         <div class="container">
-          © 2014 Copyright Text
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-        </div>
+          © 2021 CorEnergy Inc.
+          
+          <!--FIXED ACTION BUTTON-->
+      <div class="fixed-action-btn horizontal click-to-toggle">
+        <a class="waves-effect btn-small grey white-text right">Contact Us 
+          <i class="large material-icons">link</i>
+        </a>
+        <ul>
+          <li><a class="btn-floating grey darken -2"><i class="material-icons">phone-in-talk</i></a></li>
+          <li><a class="btn-floating grey darken-1"><i class="material-icons">email</i></a></li>
+          <li><a class="btn-floating grey darken-2"><i class="material-icons">info</i></a></li>
+          <li><a class="btn-floating grey darken-1"><i class="material-icons">attach_file</i></a></li>
+        </ul>
+      </div>
+      </div>
       </div>
     </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Main Javascript -->
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

@@ -7,12 +7,23 @@
   float: left;
 }
 
+
 nav {
-  background-color: gray;
+  background-color: darkgray;
+  margin-bottom: 0px;
+}
+
+/* Hero Style start here*/
+
+.page-break {
+  height:10px;
+  background:gray;
 }
 
 .page-footer {
   background-color: gray;
+  height: auto;
+  padding-top: 0px;
 }
 
 .page-footer .footer-copyright {
@@ -20,13 +31,92 @@ nav {
 }
 
 /* THIS IS NEEDED FOR THE FOOTER TO FUNCTION */
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+
+
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h5 {
+  font-family: 'Monaco', Courier, monospace;
+  font-style:italic;
 }
 
 /* THIS IS NEEDED FOR THE FOOTER TO FUNCTION */
 main {
   flex: 1 0 auto;
 }
+
+body {
+  background-color:silver;
+}
+
+/* .header{
+  text-align: center;
+} */
+
+.validate{
+  color: white;
+}
+
+.how-it-works{
+  text-align: center;
+  padding: 10px 15px;
+  color: white;
+  
+}
+
+.card-stacked {
+  color: black;
+}
+
+
+.testimonials {
+  text-align: center;
+  padding: 10px 15px;
+  color: white;
+
+}
+
+.workout-plan{
+  text-align: center;
+  padding: 10px 15px;
+  color: white;
+  height:auto
+}
+
+.nutrition-plan {
+  text-align: center;
+  padding: 10px 15px;
+  color: white;
+  height:auto
+}
+
+.hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-image: url(); */
+  background-image: url("../images/project_hero.jpg");
+  height: 640px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-form{
+
+  color:white;
+  border-style: solid 3px #024e76;
+  border-radius: 5px;
+  border: solid white 1px;
+  background-color: black;
+  opacity:0.75;
+  height:90%;
+  width: 50%;
+}
+
+.input-field{
+  color: white;
+}
+
