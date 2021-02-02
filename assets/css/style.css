@@ -28,10 +28,15 @@ nav {
 }
 
 /* THIS IS NEEDED FOR THE FOOTER TO FUNCTION */
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+
+
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h5 {
+  font-family: 'Monaco', Courier, monospace;
+  font-style:italic;
 }
 
 /* THIS IS NEEDED FOR THE FOOTER TO FUNCTION */
