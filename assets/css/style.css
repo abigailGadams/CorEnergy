@@ -9,13 +9,16 @@
 
 
 nav {
-  background-color: gray;
+  background-color: darkgray;
   margin-bottom: 0px;
 }
 
 /* Hero Style start here*/
 
-
+.page-break {
+  height:10px;
+  background:gray;
+}
 
 .page-footer {
   background-color: gray;
@@ -44,6 +47,10 @@ main {
   flex: 1 0 auto;
 }
 
+body {
+  background-color:silver;
+}
+
 /* .header{
   text-align: center;
 } */
@@ -63,11 +70,26 @@ main {
   color: black;
 }
 
-.testimonials{
+
+.testimonials {
   text-align: center;
   padding: 10px 15px;
   color: white;
 
+}
+
+.workout-plan{
+  text-align: center;
+  padding: 10px 15px;
+  color: white;
+  height:auto
+}
+
+.nutrition-plan {
+  text-align: center;
+  padding: 10px 15px;
+  color: white;
+  height:auto
 }
 
 .hero{
