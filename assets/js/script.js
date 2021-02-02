@@ -47,7 +47,7 @@ var fetchData = function (event, qty, food) {
     
 
 var getExercise = function() {
-    var exerciseWorkout = "https://wger.de/api/v2/exercise/";
+    var exerciseWorkout = "https://wger.de/api/v2/exercise/?language=2";
 
     let h= new Headers();
     h.append('Accept','application/json');
@@ -62,14 +62,47 @@ var getExercise = function() {
     fetch(req).then(function(response){
         if(response.ok){
             response.json().then(function(data){
-                console.log(data);
-
-                for(i=0;i < data.results.length; i++){
-                    console.log(data.results[i].name);
+                
+                
+                for(i=0;i < 3; i++){
+                    var responseContainerEl = document.querySelector('#workoutset-one');
+                    // Create an '<h5>' element
+                    var workoutTitle = document.createElement('h5');
+                     
+                    workoutTitle.setAttribute('p', response.data.results.name);
+                    // Append the '<h5>' element to the page
+                    responseContainerEl.appendChild(workoutTitle);
+                    // console.log(data.results[i].name);
+                    // console.log(data.results[i].description);
                 }
             });
         }
     });
 };
 
+// function displayWorkout(){
+//     var goalType = localStorage.getItem('');
+//     var repValue = '';
+//     var setValue = '';
+    
+//     if(goalType ='Mass' ){
+//         repValue = '6-12';
+//         setValue = '3-6';
+//     }
+//     else if (goalType ='lean'){
+//         repValue = '1-5';
+//         setValue = '2-6';
+//     }
+//     else if (goalType ='endurance' {
+//         repValue = '12-15';
+//         setValue = '2-6';
+//     }
+//     console.log(repValue);
+//     console.log(setValue);
+
+    
+// }
+
+
+getExercise();
 
