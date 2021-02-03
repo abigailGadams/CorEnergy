@@ -94,6 +94,13 @@ var userSubmittedData = function (event) {
 
 
 var getAllExercise = function () {
+    var massRepValue = '6-12';
+    var massSetValue = '3-6';
+    var leanRepValue = '1-5';
+    var leanSetValue = '2-6';
+    var eduranceRepValue = '12-15';
+    var eduranceSetValue = '2-6';
+
 
     for (var i = 0; i < muscleGroup.length; i++) {
         if (muscleGroup[i].checked) {
@@ -114,41 +121,7 @@ var getAllExercise = function () {
         getExerciseList(lowerBodyCategory);
     }
 
-    // for (i = 0; i < muscleGroup.length; i++) {
-    //     if (muscleGroup[i].checked == 'Upper Body') {
-    //         console.log('MAC ICE '+ muscleGroup[i].value);
-    //         var muscleGroup1 = ["10","8","12","11","13"] ;
-    //         console.log('UB ' + muscleGroup1);
-
-    //        // var workoutType  = muscleGroup[i].value;
-
-    //     } else if (muscleGroup[i].checked == 'Lower Body') {
-    //         console.log('MAC ICE2 '+ muscleGroup[i].value);
-    //         var muscleGroup2 = ["14","9"] ;
-    //         console.log('LB ' + muscleGroup2);
-    //     }
-    //     else {
-    //             console.log('MAC ICE3 '+ muscleGroup[i].value);
-    //             console.log(muscleGroup[i].value);
-    //             var muscleGroup3 = ["14","9","10","8","12","11","13"] ;
-    //             console.log('ALL ' + muscleGroup3);
-    //         }   
-    // }
-    // if ( muscleGroup === 'Upper Body') {
-    //     console.log(muscleGroup.value);
-    //     var muscleGroup1 = ["10","8","12","11","13"] ;
-    //     console.log(muscleGroup1);
-
-    //     //console.log("");
-    // } else if (muscleGroup === 'Lower Body') {
-    //     console.log(muscleGroup.value);
-    //     var muscleGroup1 = ["14","9"] ;
-    //     console.log(muscleGroup1);
-    // } else {
-    //     console.log(muscleGroup.value);
-    //     var muscleGroup1 = ["14","9","10","8","12","11","13"] ;
-    //     console.log(muscleGroup1);
-    // }   
+      
 }
 
 var getExerciseList = function (muscleCategory1) {
@@ -201,74 +174,4 @@ var printExerciseWorkout = function () {
 }
 
 
-
-// var getExercise1 = function() {
-
-//     event.preventDefault();
-
-
-
-//     var exerciseWorkout = "https://wger.de/api/v2/exercise/?language=2&category=";
-
-//     let h= new Headers();
-//     h.append('Accept','application/json');
-//     h.append('Authorization','Token 63b5f033aef2364d1ad05528871fe89c53aa18ea');
-
-
-//     let req = new Request(exerciseWorkout, {
-//         method: "GET",
-//         headers: h
-
-//     });
-//     fetch(req).then(function(response){
-//         if(response.ok){
-//             response.json().then(function(data){
-//                 console.log(data);
-
-
-//                 for(i=0;i < 1; i++){
-//                     console.log(data.results[i].name);
-
-//                     //var responseContainerEl = document.querySelector('#workoutset-one');
-//                     // Create an '<h5>' element
-//                     //var workoutTitle = document.createElement('h5');
-
-//                     //workoutTitle.textContent = response.data.results.name[] 
-//                     //workoutTitle.setAttribute('p', response.data.results.name);
-//                     // Append the '<h5>' element to the page
-//                     //responseContainerEl.appendChild(workoutTitle);
-//                      console.log(data.results[i].name);
-//                     // console.log(data.results[i].description);
-//                 }
-//             });
-//         }
-//     });
-// };
-
-// function displayWorkout(){
-//     var goalType = localStorage.getItem('');
-//     var repValue = '';
-//     var setValue = '';
-
-//     if(goalType ='Mass' ){
-//         repValue = '6-12';
-//         setValue = '3-6';
-//     }
-//     else if (goalType ='lean'){
-//         repValue = '1-5';
-//         setValue = '2-6';
-//     }
-//     else if (goalType ='endurance' {
-//         repValue = '12-15';
-//         setValue = '2-6';
-//     }
-//     console.log(repValue);
-//     console.log(setValue);
-
-
-// }
-
-
-
-//userForm.addEventListener("submit", getExercise1);
 userForm.addEventListener("submit", userSubmittedData);
