@@ -7,7 +7,6 @@
   float: left;
 }
 
-
 nav {
   background-color: darkgray;
   margin-bottom: 0px;
@@ -16,8 +15,8 @@ nav {
 /* Hero Style start here*/
 
 .page-break {
-  height:10px;
-  background:gray;
+  height: 10px;
+  background: gray;
 }
 
 .page-footer {
@@ -32,14 +31,13 @@ nav {
 
 /* THIS IS NEEDED FOR THE FOOTER TO FUNCTION */
 
-
 h2 {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 h5 {
-  font-family: 'Monaco', Courier, monospace;
-  font-style:italic;
+  font-family: "Monaco", Courier, monospace;
+  font-style: italic;
 }
 
 /* THIS IS NEEDED FOR THE FOOTER TO FUNCTION */
@@ -48,41 +46,38 @@ main {
 }
 
 body {
-  background-color:silver;
+  background-color: silver;
 }
 
 /* .header{
   text-align: center;
 } */
 
-.validate{
+.validate {
   color: white;
 }
 
-.how-it-works{
+.how-it-works {
   text-align: center;
   padding: 10px 15px;
   color: white;
-  
 }
 
 .card-stacked {
   color: black;
 }
 
-
 .testimonials {
   text-align: center;
-  padding: 10px 15px;
+  padding: 10px 30px;
   color: white;
-
 }
 
-.workout-plan{
+.workout-plan {
   text-align: center;
-  padding: 10px 15px;
+  padding: 10px 30px;
   color: white;
-  height:auto
+  height: auto;
 }
 
 .workout-plan p {
@@ -94,7 +89,7 @@ body {
   text-align: center;
   padding: 10px 15px;
   color: white;
-  height:auto
+  height: auto;
 }
 
 .nutrition-plan h2 {
@@ -110,18 +105,23 @@ body {
   padding-bottom: 20px;
 }
 
-#testimonials-container{
-padding: 0px 100px;
+#testimonials-container {
+  padding: 0px 100px;
 }
-.card-content{
+.card-content {
   color: black;
-  background-color:#2d8d84 ;
+  background-color: #2d8d84;
 }
 .section {
   height: auto;
 }
 
-.hero{
+.hero h3 {
+  color: white;
+}
+
+.hero {
+  padding-right: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,18 +133,17 @@ padding: 0px 100px;
   position: relative;
 }
 
-.hero-form{
-
-  color:white;
+.hero-form {
+  color: white;
   border-style: solid 3px #024e76;
   border-radius: 5px;
   border: solid white 1px;
   background-color: black;
-  opacity:0.75;
-  height:90%;
+  opacity: 0.75;
+  height: 90%;
   width: 50%;
 }
 
-.input-field{
+.input-field {
   color: white;
 }
