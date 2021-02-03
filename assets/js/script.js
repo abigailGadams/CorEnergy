@@ -4,9 +4,14 @@ var inches = document.getElementById("inches");
 var workoutType = document.getElementsByName("group1");
 var muscleGroup = document.getElementsByName("muscleGroup");
 var firstName = document.getElementById("first_name");
-var workout1 =  document.querySelector("#workout1-header");
-var workout2 =  document.querySelector("#workout2-header");
-var workout3 =  document.querySelector("#workout3-header");
+var workout1Header =  document.querySelector("#workout1-header");
+var workout2Header =  document.querySelector("#workout2-header");
+var workout3Header =  document.querySelector("#workout3-header");
+var workout1details = document.querySelector("#workout1-details");
+var workout2details = document.querySelector("#workout2-details");
+var workout3details = document.querySelector("#workout3-details");
+var workoutWithName = document.querySelector("#workoutWithName");
+var list = [];
 
 // NUTRITION DATA
 // API # 1: Edamam
@@ -62,7 +67,6 @@ var userSubmittedData = function (event) {
     var userInputInches = inches.value;
     var name = firstName.value;
 
-
     // THIS GETS THE WORKOUT TYPE FROM RADIO BUTTONS
     for (i = 0; i < workoutType.length; i++) {
         if (workoutType[i].checked) {
@@ -78,7 +82,6 @@ var userSubmittedData = function (event) {
     }
 
     //console.log("Users name is: " + name);   
-
 
     if (userInputFeet === "" || userInputInches === "") {
         //console.log("bad request");
@@ -101,26 +104,15 @@ var getAllExercise = function () {
 
     if (muscleSelectGroup == 'Upper Body') {
         //console.log("WORKING: Target muscle group: " + muscleSelectGroup);
-        var muscleGroup1 = ["10", "8", "12", "11", "13"];
-        var collectedMuscleGroup = [];
-
-        var muscleCategory1 = muscleGroup1[Math.floor(Math.random() * muscleGroup1.length)];
-        var muscleCategory2 = muscleGroup1[Math.floor(Math.random() * muscleGroup1.length)];
-        var muscleCategory3 = muscleGroup1[Math.floor(Math.random() * muscleGroup1.length)];
-
-        collectedMuscleGroup.push(muscleCategory1);
-        collectedMuscleGroup.push(muscleCategory2);
-        collectedMuscleGroup.push(muscleCategory3);
-
-        getExerciseList(collectedMuscleGroup);
+        var upperBodyGroup = ["10", "8", "12", "11", "13"];
+        var upperBodyCategory = upperBodyGroup[Math.floor(Math.random() * upperBodyGroup.length)];
+        getExerciseList(upperBodyCategory);
 
     } else if (muscleSelectGroup == 'Lower Body') {
-        console.log("WORK ON GETTING THIS GOING");
-    } else {
-        console.log("MAC ICE");
+        var lowerBodyGroup = ["14","9"] ;
+        var lowerBodyCategory = lowerBodyGroup[Math.floor(Math.random() * lowerBodyGroup.length)];
+        getExerciseList(lowerBodyCategory);
     }
-
-
 
     // for (i = 0; i < muscleGroup.length; i++) {
     //     if (muscleGroup[i].checked == 'Upper Body') {
@@ -159,16 +151,14 @@ var getAllExercise = function () {
     // }   
 }
 
-var getExerciseList = function (arr) {
-
-    for (i = 0; i < arr.length; i++) {
-        getExercise(arr[i]);
-    }
+var getExerciseList = function (muscleCategory1) {
+    getExercise(muscleCategory1);
 }
+
 
 var getExercise = function (category) {
     var exerciseWorkout = "https://wger.de/api/v2/exercise/?language=2&category=" + category;
-    var list = [];
+    console.log(exerciseWorkout);
 
     let h = new Headers();
     h.append('Accept', 'application/json');
@@ -183,15 +173,31 @@ var getExercise = function (category) {
     fetch(req).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
-
-                for (i = 0; i < 1; i++) {
-                    // var muscleCategory3 = muscleGroup1[Math.floor(Math.random() * muscleGroup1.length)];
-                    var random = data.results[Math.floor(Math.random() * data.results.length)];
-                    list.push(random);
+                for(i = 0; i < 3; i++){
+                    // var muscleCategory1 = muscleGroup1[Math.floor(Math.random() * muscleGroup1.length)];
+                    var randomWorkout = data.results[i];
+                    list.push(randomWorkout);
+                    console.log(data);
                 }
+                printExerciseWorkout();
             });
         }
     });
+}
+
+var printExerciseWorkout = function () {
+
+    if(firstName.value){
+        workoutWithName.textContent = "Hello " + firstName.value + ", below is your customized workout plan!";
+    }
+
+    workout1Header.textContent = "Workout 1: " + list[0].name;
+    workout2Header.textContent = "Workout 2: " + list[1].name;
+    workout3Header.textContent = "Workout 3: " + list[2].name;
+
+    workout1details.innerHTML = list[0].description;
+    workout2details.innerHTML = list[1].description;
+    workout3details.innerHTML = list[2].description;
 }
 
 

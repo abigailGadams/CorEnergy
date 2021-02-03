@@ -85,11 +85,20 @@ body {
   height:auto
 }
 
+.workout-plan p {
+  text-align: center;
+  list-style-type: none;
+}
+
 .nutrition-plan {
   text-align: center;
   padding: 10px 15px;
   color: white;
   height:auto
+}
+
+.section {
+  height: auto;
 }
 
 .hero{
