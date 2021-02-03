@@ -73,14 +73,14 @@ var getRecipeData = function () {
                 recipeBody.textContent = randomRecipe.recipe.label;
 
                 ingredientHeader.innerHTML = "<b>Ingredients:</b>";
-                
 
-                for(i = 0; i < randomRecipe.recipe.ingredients.length; i++){
+
+                for (i = 0; i < randomRecipe.recipe.ingredients.length; i++) {
                     console.log(randomRecipe.recipe.ingredients[i].text);
-                    if(i === 0){
-                        stringBuilder = randomRecipe.recipe.ingredients[i].text + " (" + Math.round(randomRecipe.recipe.ingredients[i].weight)  + "gm)";
-                    } else{
-                        stringBuilder = stringBuilder + ", " + randomRecipe.recipe.ingredients[i].text + " (" + Math.round(randomRecipe.recipe.ingredients[i].weight)  + "gm)";
+                    if (i === 0) {
+                        stringBuilder = randomRecipe.recipe.ingredients[i].text + " (" + Math.round(randomRecipe.recipe.ingredients[i].weight) + "gm)";
+                    } else {
+                        stringBuilder = stringBuilder + ", " + randomRecipe.recipe.ingredients[i].text + " (" + Math.round(randomRecipe.recipe.ingredients[i].weight) + "gm)";
                     }
                 }
                 ingredientBody.textContent = stringBuilder;
