@@ -97,6 +97,14 @@ body {
   height:auto
 }
 
+.nutrition-plan h2 {
+  color: #2d8d84;
+}
+
+.workout-plan h2 {
+  color: #2d8d84;
+}
+
 .section {
   height: auto;
 }

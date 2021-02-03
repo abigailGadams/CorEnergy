@@ -4,48 +4,89 @@ var inches = document.getElementById("inches");
 var workoutType = document.getElementsByName("group1");
 var muscleGroup = document.getElementsByName("muscleGroup");
 var firstName = document.getElementById("first_name");
-var workout1Header =  document.querySelector("#workout1-header");
-var workout2Header =  document.querySelector("#workout2-header");
-var workout3Header =  document.querySelector("#workout3-header");
+var workout1Header = document.querySelector("#workout1-header");
+var workout2Header = document.querySelector("#workout2-header");
+var workout3Header = document.querySelector("#workout3-header");
 var workout1details = document.querySelector("#workout1-details");
 var workout2details = document.querySelector("#workout2-details");
 var workout3details = document.querySelector("#workout3-details");
 var workoutWithName = document.querySelector("#workoutWithName");
+var workoutrep1 = document.querySelector("#workout1-reps");
+var workoutrep2 = document.querySelector("#workout2-reps");
+var workoutrep3 = document.querySelector("#workout3-reps");
+var recipeHeader = document.querySelector("#recipe-header");
+var ingredientHeader = document.querySelector("#ingredient-header");
+var recipeBody = document.querySelector("#recipe-body");
+var ingredientBody = document.querySelector("#ingredient-body");
+
+
 var list = [];
+var workoutValue = "";
+var muscleGroupValue = "";
 
-// NUTRITION DATA
-// API # 1: Edamam
-// API Doc for https://developer.edamam.com/edamam-docs-nutrition-api
-// Example: https://api.edamam.com/api/nutrition-data?app_id=b2f0d879&app_key=0a1818257115e160cf6b36653e441db7&Content-Type=application/json&ingr=chicken
-var beginNutritionUrl = "https://api.edamam.com/api/nutrition-data?";
-var edamamApiId = "app_id=b2f0d879";
-var edamamApiKey = "app_key=0a1818257115e160cf6b36653e441db7";
-var contentType = "Content-Type=application/json";
-var ingr = "ingr=";
-
+//WORKOUT STUFF
 var beginWorkoutUrl = "https://wger.de/api/v2/workout/"
 var workoutToken = "63b5f033aef2364d1ad05528871fe89c53aa18ea";
 var workoutContentType = "Content-Type=application/json"
 //--------------------------------------------------------------//
-// RECIPE DATA
-// Example: https://api.edamam.com/search?q=chicken&app_id=90284fbd&app_key=0d395c4ef4882bf9cdc1059aadbc0905&from=0&to=3&calories=591-722&health=alcohol-free
-// Todo: Create more variables to hold new appId and apiKey
 
-//Not used now, might need later
-var getNutritionData = function (qty, foodType1) {
-    var apiUrl = beginNutritionUrl + edamamApiId + "&" + edamamApiKey + "&" + contentType + "&" + ingr + qty + "%20" + foodType1;
-    console.log(apiUrl);
+// RECIPE DATA
+// Example: https://api.edamam.com/search?q=Chia%20Seeds&app_id=90284fbd&app_key=0d395c4ef4882bf9cdc1059aadbc0905
+// Todo: Create more variables to hold new appId and apiKey
+var beginRecipeUrl = "https://api.edamam.com/search?q=";
+var edamamApiId = "app_id=90284fbd";
+var edamamApiKey = "app_key=0d395c4ef4882bf9cdc1059aadbc0905";
+var contentType = "Content-Type=application/json";
+var food = [];
+
+
+
+
+var getRecipeData = function () {
+
+    // ARRAY FOR FOOD TYPES'
+    if (workoutValue === "Mass") {
+        food = ["Eggs", "Protien%20Shake", "Full-Fat%20Cottage%20Cheese", "Chickpeas",
+            "Rotisserie Chicken", "Lentils", "Bison", "Scallops"];
+    }
+    else if (workoutValue === "Lean") {
+        food = ["Eggs", "Salmon", "Chicken%20Breast", "Greek%20Yogurt", "Tuna", "Lean%20Beef",
+            "Shrimp", "Soybeans", "Cottage%20Cheese", "Turkey%20Breast", "Tilapia", "Beans"];
+    }
+    else {
+        food = ["Oatmeal", "Cherries", "Kale", "Bananas", "Chia%20Seeds", "Walnuts",
+            "Sweet%20Potatoes", "Wild%20Salmon"];
+    }
+
+    //        var upperBodyCategory = upperBodyGroup[Math.floor(Math.random() * upperBodyGroup.length)];
+    var randomFood = food[Math.floor(Math.random() * food.length)];
+    var apiUrl = beginRecipeUrl + randomFood + "&" + edamamApiId + "&" + edamamApiKey;
+    var stringBuilder = "";
 
     fetch(apiUrl).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
-                console.log("This works!");
-                console.log("This is: " + data.ingredients[0].text);
-                console.log(data.ingredients[0].parsed);
+                var randomRecipe = data.hits[Math.floor(Math.random() * data.hits.length)];
+                console.log(randomRecipe);
+
+                recipeHeader.innerHTML = "<b>Recipe:</b>";
+                recipeBody.textContent = randomRecipe.recipe.label;
+
+                ingredientHeader.innerHTML = "<b>Ingredients:</b>";
+                
+
+                for(i = 0; i < randomRecipe.recipe.ingredients.length; i++){
+                    console.log(randomRecipe.recipe.ingredients[i].text);
+                    if(i === 0){
+                        stringBuilder = randomRecipe.recipe.ingredients[i].text + " (" + Math.round(randomRecipe.recipe.ingredients[i].weight)  + "gm)";
+                    } else{
+                        stringBuilder = stringBuilder + ", " + randomRecipe.recipe.ingredients[i].text + " (" + Math.round(randomRecipe.recipe.ingredients[i].weight)  + "gm)";
+                    }
+                }
+                ingredientBody.textContent = stringBuilder;
             });
         }
     });
-    ;
 }
 
 //Not used now, might need later
@@ -71,36 +112,31 @@ var userSubmittedData = function (event) {
     for (i = 0; i < workoutType.length; i++) {
         if (workoutType[i].checked) {
             console.log("Workout Type: ", workoutType[i].value);
+            workoutValue = workoutType[i].value;
         }
     }
 
     // THIS GETS THE MUSCLE GROUP FROM RADIO BUTTONS
     for (i = 0; i < muscleGroup.length; i++) {
         if (muscleGroup[i].checked) {
-            //  console.log("Target muscle group: " + muscleGroup[i].value);
+            console.log("Target muscle group: " + muscleGroup[i].value);
+            muscleGroupValue = muscleGroup[i].value;
         }
     }
 
-    //console.log("Users name is: " + name);   
+    console.log("Users name is: " + name);
 
     if (userInputFeet === "" || userInputInches === "") {
-        //console.log("bad request");
+        console.log("bad request");
     } else {
-        //console.log("User selected: " + userInputFeet + " feet and " + userInputInches + " inches");
+        console.log("User selected: " + userInputFeet + " feet and " + userInputInches + " inches");
     }
-
     getAllExercise();
+    getRecipeData();
 }
 
 
 var getAllExercise = function () {
-    var massRepValue = '6-12';
-    var massSetValue = '3-6';
-    var leanRepValue = '1-5';
-    var leanSetValue = '2-6';
-    var eduranceRepValue = '12-15';
-    var eduranceSetValue = '2-6';
-
 
     for (var i = 0; i < muscleGroup.length; i++) {
         if (muscleGroup[i].checked) {
@@ -116,12 +152,12 @@ var getAllExercise = function () {
         getExerciseList(upperBodyCategory);
 
     } else if (muscleSelectGroup == 'Lower Body') {
-        var lowerBodyGroup = ["14","9"] ;
+        var lowerBodyGroup = ["14", "9"];
         var lowerBodyCategory = lowerBodyGroup[Math.floor(Math.random() * lowerBodyGroup.length)];
         getExerciseList(lowerBodyCategory);
     }
 
-      
+
 }
 
 var getExerciseList = function (muscleCategory1) {
@@ -146,7 +182,7 @@ var getExercise = function (category) {
     fetch(req).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
-                for(i = 0; i < 3; i++){
+                for (i = 0; i < 3; i++) {
                     // var muscleCategory1 = muscleGroup1[Math.floor(Math.random() * muscleGroup1.length)];
                     var randomWorkout = data.results[i];
                     list.push(randomWorkout);
@@ -159,15 +195,40 @@ var getExercise = function (category) {
 }
 
 var printExerciseWorkout = function () {
+    var massRepValue = '6-12';
+    var massSetValue = '3-6';
+    var leanRepValue = '1-5';
+    var leanSetValue = '2-6';
+    var eduranceRepValue = '12-15';
+    var eduranceSetValue = '2-6';
 
-    if(firstName.value){
+    if (firstName.value) {
         workoutWithName.textContent = "Hello " + firstName.value + ", below is your customized workout plan!";
     }
 
-    workout1Header.textContent = "Workout 1: " + list[0].name;
-    workout2Header.textContent = "Workout 2: " + list[1].name;
-    workout3Header.textContent = "Workout 3: " + list[2].name;
+    // PRINTS THE WORKOUT HEADER
+    workout1Header.innerHTML = "<b>Workout 1: </b>" + list[0].name;
+    workout2Header.innerHTML = "<b>Workout 2: </b>" + list[1].name;
+    workout3Header.innerHTML = "<b>Workout 3: </b>" + list[2].name;
 
+    // PRINTS THE WORKOUT SET AND REP VALUE 1 Mass 2 Lean 3 Endurance
+    if (workoutValue === "Mass") {
+        workoutrep1.innerHTML = "<b>Sets: </b>" + massSetValue + ", <b>Reps: </b>" + massRepValue;
+        workoutrep2.innerHTML = "<b>Sets: </b>" + massSetValue + ", <b>Reps: </b>" + massRepValue;
+        workoutrep3.innerHTML = "<b>Sets: </b>" + massSetValue + ", <b>Reps: </b>" + massRepValue;
+
+    } else if (workoutValue === "Lean") {
+        workoutrep1.innerHTML = "<b>Sets: </b>" + leanSetValue + ", <b>Reps: </b>" + leanRepValue;
+        workoutrep2.innerHTML = "<b>Sets: </b>" + leanSetValue + ", <b>Reps: </b>" + leanRepValue;
+        workoutrep3.innerHTML = "<b>Sets: </b>" + leanSetValue + ", <b>Reps: </b>" + leanRepValue;
+
+    } else {
+        workoutrep1.innerHTML = "<b>Sets: </b>" + eduranceSetValue + ", <b>Reps: </b>" + eduranceRepValue;
+        workoutrep2.innerHTML = "<b>Sets: </b>" + eduranceSetValue + ", <b>Reps: </b>" + eduranceRepValue;
+        workoutrep3.innerHTML = "<b>Sets: </b>" + eduranceSetValue + ", <b>Reps: </b>" + eduranceRepValue;
+    }
+
+    //PRINTS THE WORKOUT DESCRIPTION
     workout1details.innerHTML = list[0].description;
     workout2details.innerHTML = list[1].description;
     workout3details.innerHTML = list[2].description;
