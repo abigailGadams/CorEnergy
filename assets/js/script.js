@@ -71,71 +71,177 @@ var userSubmittedData = function (event) {
     // THIS GETS THE MUSCLE GROUP FROM RADIO BUTTONS
     for (i = 0; i < muscleGroup.length; i++) {
         if (muscleGroup[i].checked) {
-            console.log("Target muscle group: " + muscleGroup[i].value);
+          //  console.log("Target muscle group: " + muscleGroup[i].value);
         }
     }
 
-    console.log("Users name is: " + name);   
+    //console.log("Users name is: " + name);   
 
 
     if (userInputFeet === "" || userInputInches === "") {
-        console.log("bad request");
+        //console.log("bad request");
     } else {
-        console.log("User selected: " + userInputFeet + " feet and " + userInputInches + " inches");
+        //console.log("User selected: " + userInputFeet + " feet and " + userInputInches + " inches");
     }
 }
 
 
-userForm.addEventListener("submit", userSubmittedData);
+var getAllExercise = function (event) {
+    event.preventDefault();
+    for (var i = 0; i < muscleGroup.length; i++) {
+        if (muscleGroup[i].checked) {
+            var muscleSelectGroup = muscleGroup[i].value;
+            console.log('GOT IT ' + muscleSelectGroup);
+        }
+    }
 
+        
+    
+    
+        if (muscleSelectGroup =='Upper Body') {
+            //console.log("WORKING: Target muscle group: " + muscleSelectGroup);
+            var muscleGroup1 = ["10","8","12","11","13"];
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.fixed-action-btn');
-    var instances = M.FloatingActionButton.init(elems, {
-      direction: 'up'
-    });
-  });
+            var muscleCategory1 = muscleGroup1[Math.floor(Math.random() * muscleGroup1.length)];
+            var muscleCategory2 = muscleGroup1[Math.floor(Math.random() * muscleGroup1.length)];
+            var muscleCategory3 = muscleGroup1[Math.floor(Math.random() * muscleGroup1.length)];
+            console.log(muscleCategory1);
+            console.log(typeof muscleCategory1);
+            console.log(muscleCategory2);
+            console.log(muscleCategory3);
 
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.slider');
-    var instances = M.Slider.init(elems, options);
-  });
+    //         var getExercise1 = function(muscleCategory1) {
+    //             event.preventDefault();
+    //             var exerciseWorkout = "https://wger.de/api/v2/exercise/?language=2&category="+muscleCategory1;
 
-
-
-var getExercise = function() {
-    var exerciseWorkout = "https://wger.de/api/v2/exercise/?language=2";
-
-    let h= new Headers();
-    h.append('Accept','application/json');
-    h.append('Authorization','Token 63b5f033aef2364d1ad05528871fe89c53aa18ea');
+    //             let h= new Headers();
+    //             h.append('Accept','application/json');
+    //             h.append('Authorization','Token 63b5f033aef2364d1ad05528871fe89c53aa18ea');
     
 
-    let req = new Request(exerciseWorkout, {
-        method: "GET",
-        headers: h
-
-    });
-    fetch(req).then(function(response){
-        if(response.ok){
-            response.json().then(function(data){
+    //             let req = new Request(exerciseWorkout, {
+    //                 method: "GET",
+    //                 headers: h
+    // });
+    // fetch(req).then(function(response){
+    //     if(response.ok){
+    //         response.json().then(function(data){
+    //             console.log(data);
                 
                 
-                for(i=0;i < 3; i++){
-                    var responseContainerEl = document.querySelector('#workoutset-one');
-                    // Create an '<h5>' element
-                    var workoutTitle = document.createElement('h5');
+    //             for(i=0;i < 1; i++){
+    //                 console.log(data.results[i].name);
+                    
+  
                      
-                    workoutTitle.setAttribute('p', response.data.results.name);
-                    // Append the '<h5>' element to the page
-                    responseContainerEl.appendChild(workoutTitle);
-                    // console.log(data.results[i].name);
-                    // console.log(data.results[i].description);
-                }
-            });
+    //                 // console.log(data.results[i].description);
+    //             }
+    //         });
+    //     }
+    // });
+    //         }
+            //getExercise1(); 
+
+
+            // var getExercise2 = function() {
+            //     event.preventDefault();
+            // }
+
+            // var getExercise3 = function() {
+            //     event.preventDefault();
+            // }
+            
+
+
+        } else if (muscleSelectGroup =='Lower Body') {
+            //console.log("WORKING: Target muscle group: " + muscleSelectGroup);
+        } else {
+            console.log("MAC ICE");
         }
-    });
-};
+    
+    
+
+    // for (i = 0; i < muscleGroup.length; i++) {
+    //     if (muscleGroup[i].checked == 'Upper Body') {
+    //         console.log('MAC ICE '+ muscleGroup[i].value);
+    //         var muscleGroup1 = ["10","8","12","11","13"] ;
+    //         console.log('UB ' + muscleGroup1);
+          
+    //        // var workoutType  = muscleGroup[i].value;
+          
+    //     } else if (muscleGroup[i].checked == 'Lower Body') {
+    //         console.log('MAC ICE2 '+ muscleGroup[i].value);
+    //         var muscleGroup2 = ["14","9"] ;
+    //         console.log('LB ' + muscleGroup2);
+    //     }
+    //     else {
+    //             console.log('MAC ICE3 '+ muscleGroup[i].value);
+    //             console.log(muscleGroup[i].value);
+    //             var muscleGroup3 = ["14","9","10","8","12","11","13"] ;
+    //             console.log('ALL ' + muscleGroup3);
+    //         }   
+    // }
+    // if ( muscleGroup === 'Upper Body') {
+    //     console.log(muscleGroup.value);
+    //     var muscleGroup1 = ["10","8","12","11","13"] ;
+    //     console.log(muscleGroup1);
+        
+    //     //console.log("");
+    // } else if (muscleGroup === 'Lower Body') {
+    //     console.log(muscleGroup.value);
+    //     var muscleGroup1 = ["14","9"] ;
+    //     console.log(muscleGroup1);
+    // } else {
+    //     console.log(muscleGroup.value);
+    //     var muscleGroup1 = ["14","9","10","8","12","11","13"] ;
+    //     console.log(muscleGroup1);
+    // }   
+}
+
+
+
+// var getExercise1 = function() {
+    
+//     event.preventDefault();
+    
+    
+    
+//     var exerciseWorkout = "https://wger.de/api/v2/exercise/?language=2&category=";
+
+//     let h= new Headers();
+//     h.append('Accept','application/json');
+//     h.append('Authorization','Token 63b5f033aef2364d1ad05528871fe89c53aa18ea');
+    
+
+//     let req = new Request(exerciseWorkout, {
+//         method: "GET",
+//         headers: h
+
+//     });
+//     fetch(req).then(function(response){
+//         if(response.ok){
+//             response.json().then(function(data){
+//                 console.log(data);
+                
+                
+//                 for(i=0;i < 1; i++){
+//                     console.log(data.results[i].name);
+                    
+//                     //var responseContainerEl = document.querySelector('#workoutset-one');
+//                     // Create an '<h5>' element
+//                     //var workoutTitle = document.createElement('h5');
+                    
+//                     //workoutTitle.textContent = response.data.results.name[] 
+//                     //workoutTitle.setAttribute('p', response.data.results.name);
+//                     // Append the '<h5>' element to the page
+//                     //responseContainerEl.appendChild(workoutTitle);
+//                      console.log(data.results[i].name);
+//                     // console.log(data.results[i].description);
+//                 }
+//             });
+//         }
+//     });
+// };
 
 // function displayWorkout(){
 //     var goalType = localStorage.getItem('');
@@ -161,5 +267,19 @@ var getExercise = function() {
 // }
 
 
-getExercise();
 
+//userForm.addEventListener("submit", getExercise1);
+userForm.addEventListener("submit", userSubmittedData);
+userForm.addEventListener("submit", getAllExercise);
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, {
+      direction: 'up'
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems, options);
+  });
