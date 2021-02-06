@@ -18,6 +18,10 @@ var recipeHeader = document.querySelector("#recipe-header");
 var ingredientHeader = document.querySelector("#ingredient-header");
 var recipeBody = document.querySelector("#recipe-body");
 var ingredientBody = document.querySelector("#ingredient-body");
+var workoutContainer = document.querySelector("#workout-container");
+var nutritionContainer = document.querySelector("#nutrition-container");
+var btwnHeroWorkout = document.querySelector("#btwn-hero-workout");
+var btwnWorkoutNutrition = document.querySelector("#btwn-workout-nutrition");
 
 
 var list = [];
@@ -104,6 +108,11 @@ var fetchData = function (event, qty, food) {
 
 var userSubmittedData = function (event) {
     event.preventDefault();
+    // remove ".hide" class from the two page-break divs and the sections for wrokout and nutrition
+    workoutContainer.classList.remove("hide");
+    nutritionContainer.classList.remove("hide");
+    btwnHeroWorkout.classList.remove("hide");
+    btwnWorkoutNutrition.classList.remove("hide");
     var userInputFeet = feet.value;
     var userInputInches = inches.value;
     var name = firstName.value;
@@ -236,3 +245,11 @@ var printExerciseWorkout = function () {
 
 
 userForm.addEventListener("submit", userSubmittedData);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, {
+      direction: 'up'
+    });
+  });

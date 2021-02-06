@@ -17,8 +17,11 @@
     <title>CoreEnergy</title>
 
     <!-- Stylesheet for CorEnergy-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <!-- Compiled and minified CSS -->
@@ -31,33 +34,33 @@
   <!-- START OF THE BODY -->
   <body>
     <header>
-      <div>
-        <nav>
-          <div class="nav-wrapper black">
-            <img
-              id="logo-container"
-              href="#"
-              src="./assets/images/logo.png"
-              alt="Test"
-              height="60"
-              width="220"
-              class="brand-logo"
-            />
+      <nav>
+        <div class="nav-wrapper black">
+          <img
+            id="logo-container"
+            href="#"
+            src="./assets/images/logo.png"
+            alt="Test"
+            height="60"
+            width="220"
+            class="brand-logo"
+          />
 
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <!-- <li><a href="#">Component 1</a></li>
-              <li><a href="#">Component 2</a></li>
-              <li><a href="#">Component 3</a></li> -->
-            </ul>
-          </div>
-        </nav>
-      </div>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <!-- <li><a href="#">Component 1</a></li>
+            <li><a href="#">Component 2</a></li>
+            <li><a href="#">Component 3</a></li> -->
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <!-- MAIN SECTION OF THE SITE-->
     <section class="how-it-works black">
       <div class="col s12 m7">
-        <h5 class="header">"Don't Limit Your Challenges. Challenge Your Limits."</h5>
+        <h5 class="header">
+          "Don't Limit Your Challenges. Challenge Your Limits."
+        </h5>
         <div class="card horizontal">
           <div class="card-image">
             <img src="" />
@@ -65,122 +68,151 @@
         </div>
       </div>
     </section>
-   
+
     <section class="hero">
-            <div class="caption center-align">
-              <h3><i>Today is the day.</i></h3>
-              <h5 class="light grey-text text-lighten-3">Enter your health goals to gain instant access to a personalized workout plan or meal plan</h5>
-            </div>
-          </div>
+      <div class="caption center-align">
+        <h3><i>Today is the day.</i></h3>
+        <h5 class="light grey-text text-lighten-3">
+          Enter your health goals to gain instant access to a personalized
+          workout plan or meal plan
+        </h5>
+      </div>
       <div class="hero-form">
         <div class="row">
           <div class="row">
             <div class="input-field col s6">
-              <input placeholder="Please enter your first name here" id="first_name" type="text" class="validate">
+              <input
+                placeholder="Please enter your first name here"
+                id="first_name"
+                type="text"
+                class="validate"
+              />
               <label for="first_name">First Name</label>
             </div>
-        <div class="row">
-          <form class="col s12" id="user-form">
-            <label>Height</label>
-            <select class="browser-default" id="feet">
-              <option value="" disabled selected>Choose your height</option>
-              <option value="4">4 Feet</option>
-              <option value="5">5 Feet</option>
-              <option value="6">6 Feet</option>
-              <option value="7">7 Feet</option>
-            </select>
-            <label>Inches</label>
-            <select class="browser-default" id="inches">
-              <option value="" disabled selected>Choose your option</option>
-              <option value="0">0 inches</option>
-              <option value="1">1 inches</option>
-              <option value="2">2 inches</option>
-              <option value="3">3 inches</option>
-              <option value="4">3 inches</option>
-              <option value="5">5 inches</option>
-              <option value="6">6 inches</option>
-              <option value="7">7 inches</option>
-              <option value="8">8 inches</option>
-              <option value="9">9 inches</option>
-              <option value="10">10 inches</option>
-              <option value="11">11 inches</option>
-            </select>
-            <p>Workout Type</p>
-            <p>
-              <label >
-                <input name="group1" type="radio" id="workoutType" value="Mass" checked/>
-                <span>Mass</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input name="group1" type="radio" id="workoutType" value="Lean" />
-                <span>Lean</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input name="group1" type="radio" id="workoutType" value="Endurance" />
-                <span>Endurance</span>
-              </label>
-            </p>   
+          </div>
+          <div class="row">
+            <form class="col s12" id="user-form">
+              <label>Height</label>
+              <select class="browser-default" id="feet">
+                <option value="" disabled selected>Choose your height</option>
+                <option value="4">4 Feet</option>
+                <option value="5">5 Feet</option>
+                <option value="6">6 Feet</option>
+                <option value="7">7 Feet</option>
+              </select>
+              <label>Inches</label>
+              <select class="browser-default" id="inches">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="0">0 inches</option>
+                <option value="1">1 inches</option>
+                <option value="2">2 inches</option>
+                <option value="3">3 inches</option>
+                <option value="4">3 inches</option>
+                <option value="5">5 inches</option>
+                <option value="6">6 inches</option>
+                <option value="7">7 inches</option>
+                <option value="8">8 inches</option>
+                <option value="9">9 inches</option>
+                <option value="10">10 inches</option>
+                <option value="11">11 inches</option>
+              </select>
+              <p>Workout Type</p>
+              <p>
+                <label>
+                  <input
+                    name="group1"
+                    type="radio"
+                    id="workoutType"
+                    value="Mass"
+                    checked
+                  />
+                  <span>Mass</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input
+                    name="group1"
+                    type="radio"
+                    id="workoutType"
+                    value="Lean"
+                  />
+                  <span>Lean</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input
+                    name="group1"
+                    type="radio"
+                    id="workoutType"
+                    value="Endurance"
+                  />
+                  <span>Endurance</span>
+                </label>
+              </p>
 
+              <!-- TARGETED MUSCLE GROUP LIST-->
+              <p>Targed Muscle Group</p>
+              <p>
+                <label>
+                  <input
+                    name="muscleGroup"
+                    type="radio"
+                    value="Upper Body"
+                    checked
+                  />
+                  <span>Upper Body</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input name="muscleGroup" type="radio" value="Lower Body" />
+                  <span>Lower Body</span>
+                </label>
+              </p>
 
-            <!-- TARGETED MUSCLE GROUP LIST-->
-            <p>Targed Muscle Group</p>
-            <p>
-              <label >
-                <input name="muscleGroup" type="radio" value="Upper Body" checked/>
-                <span>Upper Body</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input name="muscleGroup" type="radio" value="Lower Body" />
-                <span>Lower Body</span>
-              </label>
-            </p>
-
-            <!-- SUBMIT BUTTON-->
-            <button
-              class="btn waves-effect waves-light modal-trigger"
-              id="submit"
-              type="submit"
-              name="action"
-            >
-              Submit
-              <i class="material-icons right">send</i>
-            </button>
-          </form>
+              <!-- SUBMIT BUTTON-->
+              <button
+                class="btn waves-effect waves-light modal-trigger"
+                id="submit"
+                type="submit"
+                name="action"
+              >
+                Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
-  </section>
 
-  <div class = "page-break"></div>
-  <section class="workout-plan black" id="workout-container">
-    <div class="col s12 m7">
-      <h2 class="header" id="workoutWithName">Your Workout Plan</h2>
-      <div class="divider"></div>
-      <div>
-        <div class="section container">
-          <h5 id="workout1-header"></h5>
-          <h6 id="workout1-reps"></h6>
-          <p id="workout1-details"></p>
-        </div>
+    <div class="page-break hide" id="btwn-hero-workout"></div>
+    
+    <section class="workout-plan black hide" id="workout-container">
+      <div class="col s12 m7">
+        <h2 class="header" id="workoutWithName">Your Workout Plan</h2>
         <div class="divider"></div>
-        <div class="section container">
-          <h5 id="workout2-header"></h5>
-          <h6 id="workout2-reps"></h6>
-          <p id="workout2-details"></p>
+        <div>
+          <div class="section container">
+            <h5 id="workout1-header"></h5>
+            <h6 id="workout1-reps"></h6>
+            <p id="workout1-details"></p>
+          </div>
+          <div class="divider"></div>
+          <div class="section container">
+            <h5 id="workout2-header"></h5>
+            <h6 id="workout2-reps"></h6>
+            <p id="workout2-details"></p>
+          </div>
+          <div class="divider"></div>
+          <div class="section container">
+            <h5 id="workout3-header"></h5>
+            <h6 id="workout3-reps"></h6>
+            <p id="workout3-details"></p>
+          </div>
         </div>
-        <div class="divider"></div>
-        <div class="section container">
-          <h5 id="workout3-header"></h5>
-          <h6 id="workout3-reps"></h6>
-          <p id="workout3-details"></p>
-        </div>
-      </div>
       </div>
       <!--CONTAINER-->
       <div class="card horizontal">
@@ -188,68 +220,95 @@
           <img src="" />
         </div>
       </div>
-  </section>
-<div class = "page-break"></div>
+    </section>
 
-        <section class="nutrition-plan black">
-          <div class="col s12 m7">
-            <h2 class="header">Your Nutrition Plan</h2>
-            <div style= "height:auto"></div><!--CONTAINER-->
-             <!-- Page Layout -->
-            <div class="row">
-            <div class="col s12 m4 l3 container" style ="height:auto">
-              <h5 id="recipe-header"></h5>
-              <h6 id="recipe-body"></h6>
-            </div>
-            <div class="col s12 m8 l9 container" style = "height:auto">
-              <h5 id="ingredient-header"></h5>
-              <h6 id="ingredient-body"></h6>
-            </div>
-            <div class="Recipe">
-              <div class="card-image">
-                <img src="" />
-              </div>
-            </div>
-          </section>
+    <div class="page-break hide" id="btwn-workout-nutrition"></div>
 
-<div class = "page-break"></div>
-<!-- TESTIMONIALS-->    
-<section class="testimonials black">
+    <section class="nutrition-plan black hide" id="nutrition-container">
+      <div class="col s12 m7">
+        <h2 class="header">Your Nutrition Plan</h2>
+        <div style="height: auto"></div>
+        <!--CONTAINER-->
+        <!-- Page Layout -->
+        <div class="row">
+          <div class="col s12 m4 l3 container" style="height: auto">
+            <h5 id="recipe-header"></h5>
+            <h6 id="recipe-body"></h6>
+          </div>
+          <div class="col s12 m8 l9 container" style="height: auto">
+            <h5 id="ingredient-header"></h5>
+            <h6 id="ingredient-body"></h6>
+          </div>
+          <div class="Recipe">
+            <div class="card-image">
+              <img src="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-break"></div>
+    <!-- TESTIMONIALS-->
+    <section class="testimonials black">
       <h2 class="testimonials-header">Testimonials</h2>
       <div class="row" id="testimonials-container">
         <div class="col s4">
           <div class="card">
             <div class="card-image">
-              <img src="https://picsum.photos/id/841/300/300">
+              <img src="https://picsum.photos/id/841/300/300" />
               <span class="card-title">Jessica P.</span>
-              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+              <a class="btn-floating halfway-fab waves-effect waves-light red"
+                ><i class="material-icons">add</i></a
+              >
             </div>
             <div class="card-content">
-              <p><i>"My 2021 New Years resolution to eat healthy and improve my endurance has been my most successful resolution yet, all thanks to CorEnergy!!"</i></p>
+              <p>
+                <i
+                  >"My 2021 New Years resolution to eat healthy and improve my
+                  endurance has been my most successful resolution yet, all
+                  thanks to CorEnergy!!"</i
+                >
+              </p>
             </div>
           </div>
         </div>
         <div class="col s4">
           <div class="card">
             <div class="card-image">
-              <img src="https://picsum.photos/id/770/300/300">
+              <img src="https://picsum.photos/id/770/300/300" />
               <span class="card-title">Jake S.</span>
-              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+              <a class="btn-floating halfway-fab waves-effect waves-light red"
+                ><i class="material-icons">add</i></a
+              >
             </div>
             <div class="card-content">
-              <p><i>Since Covid times began, it's been so hard to find the time and energy to find and prepare a healthy meal. CorEnergy has changed everything, giving me easy, instant access to a workout and meal plan that benefits my health goals! </i></p>
+              <p>
+                <i
+                  >Since Covid times began, it's been so hard to find the time
+                  and energy to find and prepare a healthy meal. CorEnergy has
+                  changed everything, giving me easy, instant access to a
+                  workout and meal plan that benefits my health goals!
+                </i>
+              </p>
             </div>
           </div>
         </div>
         <div class="col s4">
           <div class="card">
             <div class="card-image">
-              <img src="https://picsum.photos/id/550/300/300">
+              <img src="https://picsum.photos/id/550/300/300" />
               <span class="card-title">Mel A.</span>
-              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+              <a class="btn-floating halfway-fab waves-effect waves-light red"
+                ><i class="material-icons">add</i></a
+              >
             </div>
             <div class="card-content">
-              <p>The Cottage Cheese Veggie Dip recipe that my CorEnergy Nutrition Plan customized for me was a delious low calorie meal, and easy to prepare dish. CorEnergy recipes never disappoint!!!</p>
+              <p>
+                The Cottage Cheese Veggie Dip recipe that my CorEnergy Nutrition
+                Plan customized for me was a delious low calorie meal, and easy
+                to prepare dish. CorEnergy recipes never disappoint!!!
+              </p>
             </div>
           </div>
         </div>
@@ -264,9 +323,9 @@
             <h5 class="white-text">About CoreEnergy</h5>
 
             <p class="grey-text text-lighten-4">
-              We are a team driven individuals hoping to create a platform which allows users to
-              access workout plans and nutrition infomation customized to their
-              specific health goals.
+              We are a team driven individuals hoping to create a platform which
+              allows users to access workout plans and nutrition infomation
+              customized to their specific health goals.
             </p>
           </div>
         </div>
@@ -274,20 +333,37 @@
       <div class="footer-copyright">
         <div class="container">
           © 2021 CorEnergy Inc.
-          
+
           <!--FIXED ACTION BUTTON-->
-      <div class="fixed-action-btn horizontal click-to-toggle">
-        <a class="waves-effect btn-small grey white-text right">Contact Us 
-          <i class="large material-icons">link</i>
-        </a>
-        <ul>
-          <li><a class="btn-floating grey darken -2"><i class="material-icons">phone-in-talk</i></a></li>
-          <li><a class="btn-floating grey darken-1"><i class="material-icons">email</i></a></li>
-          <li><a class="btn-floating grey darken-2"><i class="material-icons">info</i></a></li>
-          <li><a class="btn-floating grey darken-1"><i class="material-icons">attach_file</i></a></li>
-        </ul>
-      </div>
-      </div>
+          <div class="fixed-action-btn horizontal click-to-toggle">
+            <a class="waves-effect btn-small grey white-text right"
+              >Contact Us
+              <i class="large material-icons">link</i>
+            </a>
+            <ul>
+              <li>
+                <a class="btn-floating grey darken -2"
+                  ><i class="material-icons">phone-in-talk</i></a
+                >
+              </li>
+              <li>
+                <a class="btn-floating grey darken-1"
+                  ><i class="material-icons">email</i></a
+                >
+              </li>
+              <li>
+                <a class="btn-floating grey darken-2"
+                  ><i class="material-icons">info</i></a
+                >
+              </li>
+              <li>
+                <a class="btn-floating grey darken-1"
+                  ><i class="material-icons">attach_file</i></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
 
