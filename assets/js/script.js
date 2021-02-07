@@ -16,6 +16,7 @@ var workoutrep2 = document.querySelector("#workout2-reps");
 var workoutrep3 = document.querySelector("#workout3-reps");
 var recipeHeader = document.querySelector("#recipe-header");
 var ingredientHeader = document.querySelector("#ingredient-header");
+var ImageHeader = document.querySelector("#recipe-img");
 var recipeBody = document.querySelector("#recipe-body");
 var ingredientBody = document.querySelector("#ingredient-body");
 var workoutContainer = document.querySelector("#workout-container");
@@ -97,6 +98,8 @@ var getRecipeData = function () {
         console.log(randomRecipe);
 
         recipeHeader.innerHTML = "<b>Recipe:</b> " + "<em>" + randomRecipe.recipe.label + "</em";
+        ImageHeader.innerHTML =randomRecipe.recipe.imgage;
+        console.log(randomRecipe.recipe.image);
 
         ingredientHeader.innerHTML = "<b>Ingredients:</b>";
 
