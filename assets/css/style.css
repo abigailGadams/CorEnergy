@@ -25,6 +25,7 @@ nav {
 
 .caption .box{
   color: teal;
+
 }
 
 
@@ -129,6 +130,10 @@ body {
 
 .nutrition-plan h2 {
   color: #2D8D84;
+}
+
+#recipe-img {
+  image
 }
 
 
