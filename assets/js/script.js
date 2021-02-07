@@ -97,7 +97,7 @@ var getRecipeData = function () {
           data.hits[Math.floor(Math.random() * data.hits.length)];
         console.log(randomRecipe);
 
-        recipeHeader.innerHTML = "<b>Recipe:</b> " + "<em>" + randomRecipe.recipe.label + "</em";
+        recipeHeader.innerHTML =  "<b>" + randomRecipe.recipe.label + "</b";
         // ImageHeader.innerHTML ="<img src=\'"+randomRecipe.recipe.image+"'\' width=\'300px\' height=\'150px\'>"
         console.log(randomRecipe.recipe.image);
         var imgUrl = randomRecipe.recipe.image ;

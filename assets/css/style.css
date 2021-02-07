@@ -17,14 +17,19 @@ nav {
 .caption {
   text-emphasis-color: white;
   border-radius: 5; 
-  margin: auto;
-  text-align:left;
+  margin:auto;
+  text-align:left center;
   height: 150px;
   width: 400px;
   }
 
-.caption .box{
-  color: teal;
+#action-call{
+  color: rgb(182, 182, 182);
+  font-size: 24px ; 
+  font-weight:bold;
+  font-family: Courier, Monaco, monospace;
+
+
 
 }
 
@@ -80,6 +85,10 @@ body {
   padding: 10px 15px;
   color: white;
   
+}
+
+.workout-img1 {
+  img-url: 
 }
 
 .card-stacked {
@@ -155,6 +164,7 @@ body {
   opacity:0.80;
   height:90%;
   width: 50%;
+  margin-right:auto;
 }
 
 .input-field{
