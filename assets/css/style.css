@@ -24,7 +24,7 @@ nav {
   }
 
 #action-call{
-  color: rgb(182, 182, 182);
+  color: silver;
   font-size: 24px ; 
   font-weight:bold;
   font-family: Courier, Monaco, monospace;
@@ -87,14 +87,13 @@ body {
   
 }
 
-.workout-img1 {
-  img-url: 
-}
-
 .card-stacked {
   color: black;
 }
 
+.card-title{
+  text-transform: uppercase;
+}
 
 .testimonials {
   text-align: center;
