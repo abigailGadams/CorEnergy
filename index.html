@@ -61,22 +61,18 @@
         <h5 class="header">
           "Don't Limit Your Challenges. Challenge Your Limits."
         </h5>
-        <div class="card horizontal">
-          <div class="card-image">
-            <img src="" />
-          </div>
-        </div>
       </div>
     </section>
 
+    
     <section class="hero">
       <div class="caption">
-        <h3><i>Today is the day.</i></h3>
+        <h3>Today is the day.</h3>
         <div class="wrapper">
           <div class="box">
-            <p id = "action-call">
+            <p id="action-call">
               Enter your health goals to gain instant access to a personalized
-              workout plan or meal plan
+              workout plan and meal plan
             </p>
           </div>
         </div>
@@ -87,29 +83,29 @@
           <div class="row">
             <div class="input-field col s6">
               <input
-                placeholder="Please enter your first name here"
+                placeholder="Enter First Name"
                 id="first_name"
                 type="text"
                 class="validate"
               />
-              <label for="first_name">First Name</label>
+              <label class="form-titles" for="first_name">First Name</label>
             </div>
           </div>
           <div class="row">
             <form class="col s12" id="user-form">
-              <label>Height</label>
+              <label>Height (In Feet)</label>
               <select class="browser-default" id="feet">
-                <option value="" disabled selected>Choose your height</option>
+                <option value="" disabled selected>Select height</option>
                 <option value="4">4 Feet</option>
                 <option value="5">5 Feet</option>
                 <option value="6">6 Feet</option>
                 <option value="7">7 Feet</option>
               </select>
-              <label>Inches</label>
+              <label>Height (In inches)</label>
               <select class="browser-default" id="inches">
-                <option value="" disabled selected>Choose your option</option>
+                <option value="" disabled selected>Select height </option>
                 <option value="0">0 inches</option>
-                <option value="1">1 inches</option>
+                <option value="1">1 inch</option>
                 <option value="2">2 inches</option>
                 <option value="3">3 inches</option>
                 <option value="4">3 inches</option>
@@ -205,6 +201,7 @@
                 <img src= 'https://wallpaperaccess.com/full/1986808.jpg'
                 width=\'400px\' height=\'150px\' />
                 <span class="card-title" id="workout1-header"></span>
+                <div id="workout-header"></div>
               </div>
               <div class="card-content">
                 <h6 id="workout1-reps"></h6>
@@ -219,6 +216,7 @@
                 'https://besthqwallpapers.com/Uploads/7-10-2019/107678/thumb2-dumbbells-gym-bodybuilding-concepts-metal-dumbbells-20-kilogram-dumbbells.jpg'
                 width=\'400px\' height=\'150px\' />
                 <span class="card-title" id="workout2-header"></span>
+                <div id="workout-header"></div>
               </div>
               <div class="card-content">
                 <h6 id="workout2-reps"></h6>
@@ -231,7 +229,7 @@
               <div class="card-image">
                 <img src= 'https://wallpaperaccess.com/full/1986808.jpg'
                 width=\'400px\' height=\'150px\' />
-                <span class="card-title" id="workout3-header"></span>
+                <div class="card-title" id="workout3-header"></div>
               </div>
               <div class="card-content">
                 <h6 id="workout3-reps"></h6>
@@ -241,29 +239,25 @@
           </div>
         </div>
       </div>
-      <!--CONTAINER-->
-      <div class="card horizontal">
-        <div class="card-image">
-          <img src="" />
-        </div>
-      </div>
     </section>
 
     <div class="page-break hide" id="btwn-workout-nutrition"></div>
 
     <section class="nutrition-plan black hide" id="nutrition-container">
-      <div class="col s12">
-        <h2 class="header">Your Nutrition Plan</h2>
+      <span class="col s12 m7">
+        <h2 class="header">Your Custom Meal Plan</h2>
         <div style="height: auto"></div>
         <!--CONTAINER-->
         <!-- Page Layout -->
-        <div class="row">
-          <div class="col s12">
+        <div class="row"><span class ="flow-text">
+          <div class="col s12 m6">
             <div class="card" style="max-width: 18rem; margin: 0 auto">
               <div class="card-image">
                 <div id="container"></div>
                 <!-- <img id="recipe-img" /> -->
-                <span class="card-title" id="recipe-header"></span>
+                <div class="card-title">
+                  <div id="recipe-header"></div>
+                </div>
               </div>
               <div class="card-content">
                 <h5 id="ingredient-header"></h5>
@@ -271,20 +265,19 @@
               </div>
             </div>
           </div>
-          <div class="Recipe">
-            <div class="card-image">
-              <img src="" />
-            </div>
-          </div>
+        </span>
         </div>
-      </div>
+      </span>
     </section>
-
-    <div class="page-break"></div>
-    <!-- TESTIMONIALS-->
-    <section class="testimonials black">
-      <h2 class="testimonials-header">Testimonials</h2>
-      <div class="row" id="testimonials-container">
+  
+  
+  <!-- TESTIMONIALS-->
+  
+  <div class="testimonials" >
+    <div class = "container">
+    <h2>Testimonials</h2>
+  </div>
+      <div class="row"><span class="flow-text">
         <div class="col s4">
           <div class="card">
             <div class="card-image">
@@ -292,30 +285,27 @@
               <span class="card-title">Jessica P.</span>
             </div>
             <div class="card-content">
-              <p>
-                <i
-                  >"My 2021 New Years resolution to eat healthy and improve my
-                  endurance has been my most successful resolution yet, all
-                  thanks to CorEnergy!!"</i
-                >
+              <p id = "test">
+                "My 2021 New Years resolution to eat healthy and improve my
+                endurance has been my most successful resolution yet, all thanks
+                to CorEnergy!!"
               </p>
             </div>
           </div>
         </div>
-        <div class="col s4">
+        </span>
+        <div class="col s4 ">
           <div class="card">
             <div class="card-image">
               <img src="https://picsum.photos/id/770/300/300" />
               <span class="card-title">Jake S.</span>
             </div>
-            <div class="card-content">
-              <p>
-                <i
-                  >Since Covid times began, it's been so hard to find the time
-                  and energy to find and prepare a healthy meal. CorEnergy has
-                  changed everything, giving me easy, instant access to a
-                  workout and meal plan that benefits my health goals!
-                </i>
+            <div class="card-content" >
+              <p id = "test">
+                "Since Covid times began, it's been so hard to find the time and
+                energy to find and prepare a healthy meal. CorEnergy has changed
+                everything, giving me easy, instant access to a workout and meal
+                plan that benefits my health goals!"
               </p>
             </div>
           </div>
@@ -327,73 +317,78 @@
               <span class="card-title">Mel A.</span>
             </div>
             <div class="card-content">
-              <p>
-                The Cottage Cheese Veggie Dip recipe that my CorEnergy Nutrition
-                Plan customized for me was a delious low calorie meal, and easy
-                to prepare dish. CorEnergy recipes never disappoint!!!
+              <p id = "test"> 
+                "The Cottage Cheese Veggie Dip recipe that my CorEnergy
+                Nutrition Plan customized for me was a delious low calorie meal,
+                and easy to prepare dish. CorEnergy recipes never
+                disappoint!"
               </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </span>
+  </section>
 
-    <!-- FOOTER SECTION OF THE SITE -->
-    <footer class="page-footer black">
+  <!-- FOOTER SECTION OF THE SITE -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h5 class="white-text">About CoreEnergy</h5>
+
+          <p class="about-content">
+            Our mission is to provide a platform which allows users to obtain
+            easy, instantaneous access to workout plans and meal plans
+            customized to their specific health goals. The CorEnergy team is
+            passionate about contributing to the developing industry which is
+            integrating health and media using innovative technology.
+            CorEnergy's team consists of a group of young entrepreneuers whose
+            curiousity and
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
       <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">About CoreEnergy</h5>
+        © 2021 CorEnergy Inc.
 
-            <p class="grey-text text-lighten-4">
-              We are a team driven individuals hoping to create a platform which
-              allows users to access workout plans and nutrition infomation
-              customized to their specific health goals.
-            </p>
-          </div>
+        <!--FIXED ACTION BUTTON-->
+        <div class="fixed-action-btn horizontal click-to-toggle">
+          <a class="waves-effect btn-small grey white-text right"
+            >Contact Us
+            <i class="large material-icons">link</i>
+          </a>
+          <ul>
+            <li>
+              <a class="btn-floating grey darken -2"
+                ><i class="material-icons">phone-in-talk</i></a
+              >
+            </li>
+            <li>
+              <a class="btn-floating grey darken-1"
+                ><i class="material-icons">email</i></a
+              >
+            </li>
+            <li>
+              <a class="btn-floating grey darken-2"
+                ><i class="material-icons">info</i></a
+              >
+            </li>
+            <li>
+              <a class="btn-floating grey darken-1"
+                ><i class="material-icons">attach_file</i></a
+              >
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="footer-copyright">
-        <div class="container">
-          © 2021 CorEnergy Inc.
+    </div>
+  </footer>
+</body>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-          <!--FIXED ACTION BUTTON-->
-          <div class="fixed-action-btn horizontal click-to-toggle">
-            <a class="waves-effect btn-small grey white-text right"
-              >Contact Us
-              <i class="large material-icons">link</i>
-            </a>
-            <ul>
-              <li>
-                <a class="btn-floating grey darken -2"
-                  ><i class="material-icons">phone-in-talk</i></a
-                >
-              </li>
-              <li>
-                <a class="btn-floating grey darken-1"
-                  ><i class="material-icons">email</i></a
-                >
-              </li>
-              <li>
-                <a class="btn-floating grey darken-2"
-                  ><i class="material-icons">info</i></a
-                >
-              </li>
-              <li>
-                <a class="btn-floating grey darken-1"
-                  ><i class="material-icons">attach_file</i></a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <!-- Main Javascript -->
-    <script src="./assets/js/script.js"></script>
-  </body>
+  <!-- Main Javascript -->
+  <script src="./assets/js/script.js"></script>
 </html>

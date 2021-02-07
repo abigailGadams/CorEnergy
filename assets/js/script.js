@@ -245,9 +245,9 @@ var printExerciseWorkout = function () {
   }
 
   // PRINTS THE WORKOUT HEADER
-  workout1Header.innerHTML = "<b>Workout 1: </b>" + list[0].name;
-  workout2Header.innerHTML = "<b>Workout 2: </b>" + list[1].name;
-  workout3Header.innerHTML = "<b>Workout 3: </b>" + list[2].name;
+  workout1Header.innerHTML = "Exercise #1: " + list[0].name;
+  workout2Header.innerHTML = "Exercise #2: " + list[1].name;
+  workout3Header.innerHTML = "Exercise #3: " + list[2].name;
 
   // PRINTS THE WORKOUT SET AND REP VALUE 1 Mass 2 Lean 3 Endurance
   if (workoutValue === "Mass") {
