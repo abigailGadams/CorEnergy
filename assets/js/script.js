@@ -24,6 +24,7 @@ var nutritionContainer = document.querySelector("#nutrition-container");
 var btwnHeroWorkout = document.querySelector("#btwn-hero-workout");
 var btwnWorkoutNutrition = document.querySelector("#btwn-workout-nutrition");
 
+
 var list = [];
 var workoutValue = "";
 var muscleGroupValue = "";
