@@ -13,6 +13,21 @@ nav {
   margin-bottom: 0px;
 }
 
+
+.caption {
+  text-emphasis-color: white;
+  border-radius: 5; 
+  margin: auto;
+  text-align:left;
+  height: 150px;
+  width: 400px;
+  }
+
+.caption .box{
+  color: teal;
+}
+
+
 /* Hero Style start here*/
 
 .page-break {
@@ -51,9 +66,9 @@ body {
   background-color:silver;
 }
 
-/* .header{
+ .header{
   text-align: center;
-} */
+} 
 
 .validate{
   color: white;
@@ -144,3 +159,4 @@ body {
 .input-field{
   color: white;
 }
+
