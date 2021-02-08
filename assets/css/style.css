@@ -98,6 +98,11 @@ nav {
   height: 90%;
   width: 50%;
   margin-right: auto;
+  padding: bottom 10px;
+}
+
+.material-icons {
+  margin-bottom:10px;
 }
 
 .input-field {
@@ -135,7 +140,7 @@ main {
 }
 
 body {
-  width: 90%;
+  width: 100%;
   margin: 2em auto;
 }
 
