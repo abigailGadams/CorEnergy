@@ -11,10 +11,27 @@ html {
 }
 
 @media screen and (min-width: 40em) {
-  .hero .testimonials{
-      display: -moz-inline-stack;
-      grid-template-rows: none|auto|max-content|min-content|length|initial|inherit;
-  }
+  .hero {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    row-gap: 20px;
+}
+
+body {
+    background:black;
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+}
+
+p {
+  font-size:auto;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+    margin-top: 2em;
+}
 
   nav ul {
       display: flex;
