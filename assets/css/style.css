@@ -302,3 +302,13 @@ footer .footer-copyright {
   color: white;
   text-align:left;
 }
+
+#css-table {
+  display: table;
+  height: 100%;
+}
+
+#css-table .col {
+  display: table-cell;
+}
+
