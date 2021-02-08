@@ -24,6 +24,10 @@ body {
     width: 100%;
 }
 
+.hero-form p {
+  margin-bottom: 5px;
+}
+
 p {
   font-size:auto;
 }
@@ -182,11 +186,6 @@ h5 {
   color: black;
 }
 
-.card-title {
-  text-transform: uppercase;
-  background-color:rgba(107, 106, 106, 0.5)
-}
-
 .hero h3 {
   color: white;
   font: size 30px;
@@ -194,6 +193,10 @@ h5 {
 
 .hide {
   display: none;
+}
+
+.testimonials h2 {
+  margin-top: 0px;
 }
 
 .workout-plan {
@@ -214,9 +217,19 @@ h5 {
   height: auto;
 }
 
-#recipe-header {
-  background-color: rgba(156, 156, 156, 0.55);
-  font-size: 20px;
+#recipe-image {
+  padding-bottom: 20.6px;
+}
+
+.card-title {
+  text-transform: uppercase;
+  background-color:rgba(107, 106, 106, 0.5)
+}
+
+#recipe-header{
+  background-color: rgb(95,94,94);
+  width: 100%;
+  padding-top: 15px;
 }
 
 #ingredient-body {
@@ -232,13 +245,11 @@ h5 {
   width:100%;
 }
 
-
 .testimonials {
   text-align: center;
   background-color: black;
   margin:top 5;
   color: #2d8d84;
-  
 }
 
 .card-content {
@@ -254,8 +265,19 @@ h5 {
 #test {
   background-color: rgba(61, 60, 60, 0.8);
   font-family: "Monaco", Courier, monospace;
-
 }
+
+.card-content-test p {
+  margin-top: 0px;
+  padding: 10px 10px;
+  background-color:rgb(95, 94, 94);
+  font-weight:bold;
+  color:white;
+  font-family:'Courier New', Courier, monospace;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 
 
 /* THIS IS NEEDED FOR THE FOOTER TO FUNCTION */
