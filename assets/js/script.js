@@ -23,7 +23,6 @@ var nutritionContainer = document.querySelector("#nutrition-container");
 var btwnHeroWorkout = document.querySelector("#btwn-hero-workout");
 var btwnWorkoutNutrition = document.querySelector("#btwn-workout-nutrition");
 
-
 var list = [];
 var workoutValue = "";
 var muscleGroupValue = "";
@@ -97,15 +96,14 @@ var getRecipeData = function () {
           data.hits[Math.floor(Math.random() * data.hits.length)];
         console.log(randomRecipe);
 
-        recipeHeader.innerHTML =  "<b>" + randomRecipe.recipe.label + "</b";
+        recipeHeader.innerHTML = "<b>" + randomRecipe.recipe.label + "</b";
         // ImageHeader.innerHTML ="<img src=\'"+randomRecipe.recipe.image+"'\' width=\'300px\' height=\'150px\'>"
         console.log(randomRecipe.recipe.image);
-        var imgUrl = randomRecipe.recipe.image ;
+        var imgUrl = randomRecipe.recipe.image;
         var image = new Image();
         image.src = imgUrl;
         console.log(image);
-        document.getElementById('container').appendChild(image);
-        
+        document.getElementById("container").appendChild(image);
 
         ingredientHeader.innerHTML = "<b>Ingredients:</b>";
 

@@ -29,7 +29,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
@@ -49,27 +49,27 @@
           />
 
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <!-- <li><a href="#">Component 1</a></li>
-            <li><a href="#">Component 2</a></li>
-            <li><a href="#">Component 3</a></li> -->
+            
+            <a href="#aboutUs">About Us</a>
+           <a href="#">My Profile</a>
           </ul>
         </div>
       </nav>
     </header>
 
     <!-- MAIN SECTION OF THE SITE-->
-    <section class="how-it-works black">
+    <!-- <section class="how-it-works black">
       <div class="col s12 m7">
         <h5 class="header">
-          "Don't Limit Your Challenges. Challenge Your Limits."
+          
         </h5>
       </div>
-    </section>
+    </section> -->
 
     
     <div class="hero">
       <div class="caption s12 m6 l6">
-        <h3>Today is the day.</h3>
+        <h4>"Don't Limit Your Challenges. Challenge Your Limits."</h4>
         <div class="wrapper">
           <div class="box">
             <p id="action-call">
@@ -81,6 +81,7 @@
       </div>
 
       <div class="hero-form">
+        <h4 class = "signup">Sign up now!</h4>
           <div class="row">
             <div class="input-field col s12 m6 l6">
               <input
@@ -89,22 +90,22 @@
                 type="text"
                 class="validate"
               />
-              <label class="form-titles" for="first_name">First Name</label>
+              
             </div>
           </div>
           <div class="row">
             <form class="col s12" id="user-form">
-              <label>Height (In Feet)</label>
+              
               <select class="browser-default" id="feet">
-                <option value="" disabled selected>Select height</option>
+                <option value="" disabled selected>Select Height (ft)</option>
                 <option value="4">4 Feet</option>
                 <option value="5">5 Feet</option>
                 <option value="6">6 Feet</option>
                 <option value="7">7 Feet</option>
               </select>
-              <label>Height (In inches)</label>
+              
               <select class="browser-default" id="inches">
-                <option value="" disabled selected>Select height </option>
+                <option value="" disabled selected>Select Height (inches)</option>
                 <option value="0">0 inches</option>
                 <option value="1">1 inch</option>
                 <option value="2">2 inches</option>
@@ -176,10 +177,11 @@
 
               <!-- SUBMIT BUTTON-->
               <button
-                class="btn waves-effect waves-light modal-trigger"
+                class="btn waves-effect waves-light modal-trigger active"
                 id="submit"
                 type="submit"
                 name="action"
+                
               >
                 Submit
                 <i class="material-icons right">send</i>
@@ -240,6 +242,7 @@
           </div>
         </div>
       </div>
+      <div class="page-break" id="btwn-hero-workout"></div>
     </section>
 
     <div class="page-break hide" id="btwn-workout-nutrition"></div>
@@ -263,6 +266,8 @@
               </div>
             </div>
           </div>
+            <div class="page-break" id="btwn-workout-nutrition"></div>
+          <div class="page-break" id="btwn-hero-workout"></div>
     </section>
   
   
@@ -326,14 +331,14 @@
 
   <!-- FOOTER SECTION OF THE SITE -->
   <footer>
-    <div class="container">
+    <div class="container" id = "#aboutUs">
       <div class="row">
         <div class="col s12">
           <h5 class="white-text">About CoreEnergy</h5>
 
           <p class="about-content">
             Our mission is to provide a platform which allows users to obtain
-            easy, instantaneous access to workout plans and meal plans
+            easy to navigate, instantaneous access to workout plans and meal plans
             customized to their specific health goals. The CorEnergy team is
             passionate about contributing to the developing industry which is
             integrating health and media using innovative technology.
@@ -382,7 +387,7 @@
 </body>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   <!-- Main Javascript -->
   <script src="./assets/js/script.js"></script>
 </html>
